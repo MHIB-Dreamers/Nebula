@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Landing Page</title>
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animate.compat.min.css">
+</head>
+<body>
+<!-- Section 1: Header -->
+<header class="header-section">
+    <div class="header-overlay"></div>
+    <div class="header-content">
+        <img src="assets/images/nebula.png" alt="Nebula" class="logo">
+        <button class="btn btn-fantasy mb-3">Play Now</button>
+        <p>Subscribe for the next episode</p>
+    </div>
+
+    <img class="header-effect effect-1 wow rotateIn"
+         data-wow-duration="50s"
+         data-wow-delay="0s"
+         data-wow-iteration="999"
+         data-wow-offset="0"
+         src="assets/images/header.effect.1.png"
+         alt=""/>
+
+    <img class="header-effect effect-2"
+         src="assets/images/header.effect.2.png" alt=""/>
+
+    <img class="header-effect effect-3"
+         src="assets/images/header.effect.3.png" alt=""/>
+
+    <img class="header-effect effect-4 wow rotateOut"
+         data-wow-duration="40s"
+         data-wow-delay="0s"
+         data-wow-iteration="999"
+         data-wow-offset="0"
+         src="assets/images/header.effect.4.png" alt=""/>
+</header>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">GameLogo</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section 2: About the Game -->
+<section id="about" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">About Our Game</h2>
+                <p>Embark on an epic journey through a mystical realm filled with danger and wonder. [Game Name] offers
+                    an immersive experience with rich storytelling and breathtaking visuals.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="game-image.jpg" alt="Game Image" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Video Trailer -->
+<section id="trailer" class="section-padding bg-dark">
+    <div class="container">
+        <h2 class="text-center mb-5">Game Trailer</h2>
+        <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/placeholder" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Gallery -->
+<section id="gallery" class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mb-4">Gallery</h2>
+                <p>Explore stunning visuals from [Game Name]. Swipe to see more.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="gallery-slide">
+                    <img src="gallery-image.jpg" alt="Gallery" class="img-fluid rounded">
+                    <div class="mt-2 text-center">1 / 3</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Multi-Device Support -->
+<section class="section-padding bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="devices.png" alt="Devices" class="img-fluid rounded">
+            </div>
+            <div class="col-md-6">
+                <h2 class="mb-4">Play Anywhere</h2>
+                <p>Available on iOS, Android, and Steam for Windows. Enjoy [Game Name] on your preferred device!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6: NPCs -->
+<section class="section-padding">
+    <div class="container">
+        <h2 class="text-center mb-4">Meet the Characters</h2>
+        <p class="text-center mb-5">Discover the unique NPCs that bring our world to life</p>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <img src="npc1.jpg" alt="NPC 1" class="img-fluid rounded mb-3">
+                    <h5>NPC 1 Name</h5>
+                    <p class="npc-desc d-none">A mysterious warrior with a hidden past.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <img src="npc2.jpg" alt="NPC 2" class="img-fluid rounded mb-3">
+                    <h5>NPC 2 Name</h5>
+                    <p class="npc-desc d-none">A wise sage with ancient knowledge.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <img src="npc3.jpg" alt="NPC 3" class="img-fluid rounded mb-3">
+                    <h5>NPC 3 Name</h5>
+                    <p class="npc-desc d-none">A cunning rogue with a silver tongue.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Special Feature -->
+<section class="section-padding bg-dark">
+    <div class="container text-center">
+        <h2 class="mb-4">Collect the Alphabet</h2>
+        <p>Click the diamond to reveal a random character!</p>
+        <img src="diamond.png" alt="Diamond" class="diamond-feature my-4" style="max-width: 100px;">
+        <p id="random-char" class="display-6"></p>
+    </div>
+</section>
+
+<!-- Section 8: Made With -->
+<section class="section-padding">
+    <div class="container text-center">
+        <h2 class="mb-4">Made With</h2>
+        <div class="row">
+            <div class="col-md-2">Unity</div>
+            <div class="col-md-2">Blender</div>
+            <div class="col-md-2">Canva</div>
+            <div class="col-md-2">ChatGPT</div>
+            <div class="col-md-2">GeminiAI</div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 9: About the Team -->
+<section class="section-padding bg-dark">
+    <div class="container text-center">
+        <h2 class="mb-4">Our Team</h2>
+        <div class="row">
+            <div class="col-md-4">Thảo Hy</div>
+            <div class="col-md-4">Tercio</div>
+            <div class="col-md-4">Hyy</div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 10: Subscribe Form -->
+<section id="subscribe" class="section-padding">
+    <div class="container text-center">
+        <h2 class="mb-4">Subscribe</h2>
+        <form class="d-flex justify-content-center">
+            <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
+            <button type="submit" class="btn btn-fantasy">Submit</button>
+        </form>
+    </div>
+</section>
+
+<!-- Section 11: Footer -->
+<footer class="bg-dark text-center py-4">
+    <p>&copy; 2025 Ngan Ha Da Ngu. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

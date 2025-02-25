@@ -1,0 +1,84 @@
+:root {
+    /*--animate-delay: 0s;*/
+}
+
+body {
+    background: #1a1a1a;
+    color: #e6e6e6;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+}
+.logo {
+    height: 20rem;
+    object-fit: contain;
+    margin-bottom: 2rem;
+}
+.navbar {
+    background: rgba(0, 0, 0, 0.9);
+}
+.header-section {
+    height: 100vh;
+    background: url('../images/header.png') no-repeat center center/cover;
+    position: relative;
+}
+.header-overlay {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: rgba(0, 0, 0, 0.5);*/
+}
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #ffffff;
+}
+.header-section .header-effect {
+    position: absolute;
+    opacity: 1 !important;
+}
+.header-effect.effect-1 {
+    top: -4rem;
+    right: 0;
+}
+.header-effect.effect-2 {
+    top: 0;
+    right: 0;
+}
+.header-effect.effect-3 {
+    top: 0;
+    left: 0;
+}
+.header-effect.effect-4 {
+    top: 30%;
+    left: 0;
+}
+
+.btn-fantasy {
+    background: #8a2be2;
+    border: none;
+    padding: 10px 30px;
+}
+.btn-fantasy:hover {
+    background: #9b30ff;
+}
+.section-padding {
+    padding: 80px 0;
+}
+.npc-card {
+    transition: all 0.3s ease;
+}
+.npc-card:hover {
+    transform: scale(1.05);
+}
+.diamond-feature {
+    cursor: pointer;
+}
