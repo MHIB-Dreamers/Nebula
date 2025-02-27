@@ -1,34 +1,91 @@
+@font-face {
+    src: url("../fonts/Cormorant_Unicase/CormorantUnicase-Medium.ttf") format('truetype');
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/Cormorant_Unicase/CormorantUnicase-Medium.ttf") format('truetype');
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/Cormorant_Unicase/CormorantUnicase-Medium.ttf") format('truetype');
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/Cormorant_Unicase/CormorantUnicase-Medium.ttf") format('truetype');
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    src: url("../fonts/Cormorant_Unicase/CormorantUnicase-Medium.ttf") format('truetype');
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 :root {
-    /*--animate-delay: 0s;*/
+    --themes-color: #D3CF85;
+    --main-bg-color: rgb(3, 0, 39);
 }
 
 body {
-    background: #1a1a1a;
+    font-family: "Cormorant Unicase", serif;
+    font-weight: 400; /* Regular */
+    background: var(--main-bg-color);
     color: #e6e6e6;
-    font-family: 'Arial', sans-serif;
     overflow-x: hidden;
 }
+
+* {
+    cursor: none !important;
+}
+.row {
+
+
+    --bs-gutter-x: 6rem
+}
+
+.container-fluid {
+    --bs-gutter-x: 10%;
+}
+
+a:not(:hover) {
+    color: inherit;
+    text-decoration: none;
+}
+
 .logo {
     height: 20rem;
     object-fit: contain;
     margin-bottom: 2rem;
 }
+
 .navbar {
-    background: rgba(0, 0, 0, 0.9);
+    background: var(--main-bg-color);
 }
-.header-section {
+
+.heading {
     height: 100vh;
     background: url('../images/header.png') no-repeat center center/cover;
     position: relative;
 }
-.header-overlay {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
-    /*width: 100%;*/
-    /*height: 100%;*/
-    /*background: rgba(0, 0, 0, 0.5);*/
+
+.section-overlay, .section-overlay img {
+    width: 100%;
+    height: 100%;
 }
+
 .header-content {
     position: absolute;
     top: 50%;
@@ -41,44 +98,221 @@ body {
     flex-direction: column;
     color: #ffffff;
 }
-.header-section .header-effect {
+
+.heading .header-effect {
     position: absolute;
     opacity: 1 !important;
 }
+
 .header-effect.effect-1 {
     top: -4rem;
     right: 0;
 }
+
 .header-effect.effect-2 {
     top: 0;
     right: 0;
 }
+
 .header-effect.effect-3 {
     top: 0;
     left: 0;
 }
+
 .header-effect.effect-4 {
     top: 30%;
     left: 0;
 }
 
-.btn-fantasy {
-    background: #8a2be2;
-    border: none;
-    padding: 10px 30px;
+.btn-default {
+    position: relative; /* Required for pseudo-element positioning */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--themes-color) !important; /* Set text color */
+    font-size: 2rem; /* Adjust font size as needed */
+    padding: 0; /* remove default padding of button */
+    background: url("../images/button.png") no-repeat center center/contain; /* Set background image */
+    background-size: 100% 100%; /* Ensure background image fills the button */
+    border: none; /* Remove default border */
+    width: 25.5rem;
+    height: 6.5rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
-.btn-fantasy:hover {
-    background: #9b30ff;
+
+/* Mask effect */
+.btn-default::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../images/button.mask.png") no-repeat center center/contain; /* Set mask image */
+    background-size: 100% 100%; /* Ensure mask image fills the button */
+    opacity: 0.5;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    pointer-events: none;
 }
-.section-padding {
-    padding: 80px 0;
+
+.btn-default:hover {
+    scale: 1.03;
+}
+
+.btn-default:hover::before {
+    opacity: .8;
+}
+
+.btn-default span {
+    z-index: 2;
+}
+
+.btn {
+    outline: none;
+    border: 0;
+}
+
+
+.btn.btn-secondary {
+    --bs-btn-active-bg: transparent;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /*background: url("../images/arrow.down.png") no-repeat padding-box border-box 50% 50% / 100% 100% scroll;*/
+    background: url("../images/arrow.down.png") no-repeat padding-box border-box 50% / 100% scroll,
+    repeat padding-box border-box 50% 50% / 100% 100% scroll radial-gradient(circle at 50% 50%, rgba(7, 0, 91, 0) 0%, rgba(7, 0, 91, 0) 100%);
+    outline: none;
+    border: 0;
+    border-radius: 3rem;
+    line-height: 1.2;
+    color: rgba(255, 255, 255, 0.7);
+    transition: scale 0.3s ease-in-out;
+    font-size: 1.5rem;
+    padding-bottom: 3.5rem;
+    cursor: pointer;
+}
+
+.btn-secondary > span {
+    margin-top: 1.5rem
+}
+
+.btn-secondary:hover {
+    scale: 1.03;
+}
+
+section h2 {
+    color: var(--themes-color);
+    font-size: 4rem;
+}
+
+section {
+    font-size: 1.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    min-height: 46rem;
+    display: flex;
+    align-items: center;
+}
+section.fullscreen {
+    min-height: 100vh;
+}
+
+#custom-cursor {
+    position: fixed;
+    width: 7rem; /* Increased size for a larger spotlight */
+    height: 7rem; /* Increased size for a larger spotlight */
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    top: var(--y, 0);
+    left: var(--x, 0);
+    transform: translate(-50%, -50%);
+    mix-blend-mode: difference; /* Removed mix-blend-mode for a softer glow  */
+    pointer-events: none;
+    transition-timing-function: ease-out;
+    z-index: 999999;
+    filter: blur(1rem); /* add blur */
+    -webkit-filter: blur(1rem); /* for safari */
+}
+
+#trailer .backdrop-shadow {
+    box-shadow: 0 1px 19px 4px rgba(255,248,143,0.2)
+}
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0; /* make sure the snowflake below the content */
+}
+
+.snowflake::before,
+.snowflake::after {
+    position: absolute;
+    content: "";
+    top: 0; /* Changed to 0 */
+    left: 0;
+    width: 100%;
+    height: 200%; /* Increased height */
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.8;
+}
+
+.snowflake::before {
+    background-image: url(http://c15117992.r92.cf2.rackcdn.com/13b.png);
+    background-position: 50% 0%; /* Changed to 0% */
+    animation: snowfall 60s linear infinite; /* Changed animation name and duration */
+    animation-delay: -20s;
+}
+
+.snowflake::after {
+    background-image: url(http://c15117992.r92.cf2.rackcdn.com/13c.png);
+    background-position: 50% -100%; /* Changed to -100% */
+    animation: snowfall 30s linear infinite; /* Changed animation name and duration */
+    animation-delay: -40s;
+}
+
+@keyframes snowfall {
+    0% {
+        background-position-y: 0%; /* Changed to background-position-y */
+    }
+
+    100% {
+        background-position-y: 200%; /* Changed to background-position-y */
+    }
+}
+.carousel-control-next, .carousel-control-prev {
+    top: 50%;
+    bottom: 50%;
+    width: 3rem;
+}
+.carousel-control-prev-icon {
+    background: no-repeat padding-box border-box 50% / 93% scroll url("../images/arrow.left.png");
+    height: 7rem;
+}
+.carousel-control-next-icon {
+    background: no-repeat padding-box border-box 50% / 93% scroll url("../images/arrow.right.png");
+    height: 7rem;
+}
+.carousel-item {
+    /*transition: transform 2s ease, opacity .5s ease-out*/
 }
 .npc-card {
     transition: all 0.3s ease;
 }
+
 .npc-card:hover {
     transform: scale(1.05);
 }
+
 .diamond-feature {
     cursor: pointer;
 }

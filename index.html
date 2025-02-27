@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Landing Page</title>
     <link rel="stylesheet" href="assets/css/normalize.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="assets/css/animate.compat.min.css">
 </head>
 <body>
 <!-- Section 1: Header -->
-<header class="header-section">
-    <div class="header-overlay"></div>
+<header class="heading">
+    <div class="section-overlay">
+        <img src="assets/images/frame.shadow.png" alt=""/>
+    </div>
     <div class="header-content">
         <img src="assets/images/nebula.png" alt="Nebula" class="logo">
-        <button class="btn btn-fantasy mb-3">Play Now</button>
-        <p>Subscribe for the next episode</p>
+
+        <button class="btn btn-default wow shakeY mt-3"
+                data-wow-duration="30s"
+                data-wow-iteration="infinite">
+            <span>Play now</span>
+        </button>
+        <a href="javascript:;" class="btn btn-secondary mt-5">
+            <span>Subscribe for the first journey</span>
+        </a>
     </div>
 
     <img class="header-effect effect-1 wow rotateIn"
          data-wow-duration="50s"
-         data-wow-delay="0s"
-         data-wow-iteration="999"
-         data-wow-offset="0"
+         data-wow-iteration="infinite"
          src="assets/images/header.effect.1.png"
          alt=""/>
 
@@ -35,15 +42,13 @@
 
     <img class="header-effect effect-4 wow rotateOut"
          data-wow-duration="40s"
-         data-wow-delay="0s"
-         data-wow-iteration="999"
-         data-wow-offset="0"
+         data-wow-iteration="infinite"
          src="assets/images/header.effect.4.png" alt=""/>
 </header>
 
 <!-- Sticky Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="#">GameLogo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
@@ -60,43 +65,91 @@
 </nav>
 
 <!-- Section 2: About the Game -->
-<section id="about" class="section-padding">
-    <div class="container">
+<section id="about">
+    <div class="container-fluid fullscreen">
         <div class="row">
-            <div class="col-md-6">
-                <h2 class="mb-4">About Our Game</h2>
-                <p>Embark on an epic journey through a mystical realm filled with danger and wonder. [Game Name] offers
-                    an immersive experience with rich storytelling and breathtaking visuals.</p>
+            <div class="col-md-6 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4 ">Ready to embark on the first journey of the Nebula?</h2>
+                    <p>Embark on an intergalactic adventure in this fantasy language-learning game! 🚀 As a starship
+                        pilot,
+                        you'll navigate mystical galaxies, each representing a different language. Choose your Nebula,
+                        follow the cosmic roadmap, and conquer grammar challenges to forge brilliant stars. Master the
+                        universe, one word at a time! ✨</p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <img src="game-image.jpg" alt="Game Image" class="img-fluid rounded">
+            <div class="col-md-6 position-relative">
+                <img src="assets/images/img.png"
+                     alt="Game Image"
+                     class="img-fluid rounded w-100 wow fadeIn"
+                     data-wow-offset="500"
+                     data-wow-delay="0.25s"
+                     data-wow-duration="2s">
+                <div class="snowflake"></div>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Section 3: Video Trailer -->
-<section id="trailer" class="section-padding bg-dark">
-    <div class="container">
-        <h2 class="text-center mb-5">Game Trailer</h2>
+<section id="trailer"
+         class="wow fadeIn fullscreen"
+         data-wow-duration="2s"
+         data-wow-delay="0.2s">
+    <div class="container-fluid">
         <div class="ratio ratio-16x9">
-            <iframe src="https://www.youtube.com/embed/placeholder" allowfullscreen></iframe>
+            <div class="backdrop-shadow"></div>
+            <iframe id="youtube-iframe"
+                    src="https://www.youtube.com/embed/QcX96Q6ZIu4?&enablejsapi=1"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
         </div>
     </div>
 </section>
 
 <!-- Section 4: Gallery -->
-<section id="gallery" class="section-padding">
-    <div class="container">
+<section class="wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6">
-                <h2 class="mb-4">Gallery</h2>
-                <p>Explore stunning visuals from [Game Name]. Swipe to see more.</p>
+            <div class="col-md-5 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4">A Cinematic Video Game by DREAMERS</h2>
+                    <p>Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing
+                        encounters.
+                        Complete this extraordinary audio-visual journey!
+                        Every moment in Nebula is designed to captivate your senses and ignite your imagination.
+                    </p>
+                </div>
             </div>
-            <div class="col-md-6">
-                <div class="gallery-slide">
-                    <img src="gallery-image.jpg" alt="Gallery" class="img-fluid rounded">
-                    <div class="mt-2 text-center">1 / 3</div>
+            <div class="col-md-7">
+                <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://static.wixstatic.com/media/037b93_59ccce6bd01248b4a52d70007baa505f~mv2.webp/v1/fill/w_1120,h_487,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720947732.webp"
+                                 class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://static.wixstatic.com/media/037b93_527346b6a6054bf58abdd41a3e9c20ed~mv2.webp/v1/fill/w_1120,h_487,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720947742.webp"
+                                 class="d-block w-100" alt="">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -104,23 +157,27 @@
 </section>
 
 <!-- Section 5: Multi-Device Support -->
-<section class="section-padding bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6">
-                <img src="devices.png" alt="Devices" class="img-fluid rounded">
+<section class="wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-4">
+                <img src="assets/images/multidevice.webp" alt="Devices" class="img-fluid rounded">
             </div>
-            <div class="col-md-6">
-                <h2 class="mb-4">Play Anywhere</h2>
-                <p>Available on iOS, Android, and Steam for Windows. Enjoy [Game Name] on your preferred device!</p>
+            <div class="col-md-5">
+                <h2 class="mb-4">Playable on multiplatform</h2>
+                <p>Available on iOS, Android, and Steam for Windows.
+                    This game is a challenge to the status quo of online 3D games,
+                    pushing the boundaries of what’s possible in gaming.
+                    Immerse yourself in the magical world with stunning visuals and seamless gameplay,
+                    no matter where you are or what device you use. </p>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Section 6: NPCs -->
-<section class="section-padding">
-    <div class="container">
+<section class="section-padding wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid">
         <h2 class="text-center mb-4">Meet the Characters</h2>
         <p class="text-center mb-5">Discover the unique NPCs that bring our world to life</p>
         <div class="row">
@@ -150,8 +207,8 @@
 </section>
 
 <!-- Section 7: Special Feature -->
-<section class="section-padding bg-dark">
-    <div class="container text-center">
+<section class="section-padding bg-dark wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container-fluid text-center">
         <h2 class="mb-4">Collect the Alphabet</h2>
         <p>Click the diamond to reveal a random character!</p>
         <img src="diamond.png" alt="Diamond" class="diamond-feature my-4" style="max-width: 100px;">
@@ -160,8 +217,8 @@
 </section>
 
 <!-- Section 8: Made With -->
-<section class="section-padding">
-    <div class="container text-center">
+<section class="section-padding wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid text-center">
         <h2 class="mb-4">Made With</h2>
         <div class="row">
             <div class="col-md-2">Unity</div>
@@ -174,7 +231,7 @@
 </section>
 
 <!-- Section 9: About the Team -->
-<section class="section-padding bg-dark">
+<section class="section-padding bg-dark wow fadeInRight" data-wow-delay="0.2s">
     <div class="container text-center">
         <h2 class="mb-4">Our Team</h2>
         <div class="row">
@@ -186,7 +243,7 @@
 </section>
 
 <!-- Section 10: Subscribe Form -->
-<section id="subscribe" class="section-padding">
+<section id="subscribe" class="section-padding wow fadeInUp" data-wow-delay="0.2s">
     <div class="container text-center">
         <h2 class="mb-4">Subscribe</h2>
         <form class="d-flex justify-content-center">
@@ -196,12 +253,13 @@
     </div>
 </section>
 
+<div id="custom-cursor"></div>
 <!-- Section 11: Footer -->
 <footer class="bg-dark text-center py-4">
     <p>&copy; 2025 Ngan Ha Da Ngu. All rights reserved.</p>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
