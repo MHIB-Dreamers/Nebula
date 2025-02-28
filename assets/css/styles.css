@@ -305,14 +305,50 @@ section.fullscreen {
 .carousel-item {
     /*transition: transform 2s ease, opacity .5s ease-out*/
 }
+/* NPC Section Styles */
 .npc-card {
+    position: relative;
+    overflow: hidden; /* Hide overflowing content */
+    border-radius: 1rem; /* Rounded corners */
+    padding-bottom: 1rem;
     transition: all 0.3s ease;
+    cursor: pointer;
 }
 
-.npc-card:hover {
-    transform: scale(1.05);
+.npc-image-container {
+    overflow: hidden; /* Hide overflowing image */
+    margin-bottom: 3rem;
 }
 
+.npc-image {
+    /*width: 100%;*/
+    /*height: auto;*/
+    transition: transform 0.3s ease; /* Smooth scaling transition */
+}
+
+.npc-desc {
+    padding: 1rem;
+    color: #e6e6e6;
+    transition: opacity 0.7s ease; /* Smooth transition for showing/hiding */
+    opacity: 0;
+}
+
+.npc-card:hover .npc-image {
+    transform: scale(1.1); /* Scale image on hover */
+}
+
+.npc-card:hover .npc-desc {
+    opacity: 1;
+}
+
+.npc-card h5 {
+    transition: all 0.3s ease;
+    font-size: 2rem;
+}
+
+.npc-card:hover h5 {
+    color: orange;
+}
 .diamond-feature {
     cursor: pointer;
 }
