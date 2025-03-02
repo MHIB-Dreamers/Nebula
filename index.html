@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Landing Page</title>
+    <title>CosmoLinq</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png" />
+
     <link rel="stylesheet" href="assets/css/normalize.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -16,7 +18,7 @@
         <img src="assets/images/frame.shadow.png" alt=""/>
     </div>
     <div class="header-content">
-        <img src="assets/images/nebula.png" alt="Nebula" class="logo">
+        <img src="assets/images/logo.png" alt="" class="logo">
 
         <button class="btn btn-default wow shakeY mt-3"
                 data-wow-duration="30s"
@@ -41,7 +43,7 @@
          src="assets/images/header.effect.3.png" alt=""/>
 
     <img class="header-effect effect-4 wow rotateOut"
-         data-wow-duration="40s"
+         data-wow-duration="50s"
          data-wow-iteration="infinite"
          src="assets/images/header.effect.4.png" alt=""/>
 </header>
@@ -49,7 +51,9 @@
 <!-- Sticky Navbar -->
 <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">GameLogo</a>
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/icon.png" alt="" class="img-fluid">
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +62,7 @@
                 <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                 <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
                 <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link" href="#subscribe">Subscribe</a></li>
+                <li class="nav-item"><a class="nav-link" href="#special-feature">Missing Letters</a></li>
             </ul>
         </div>
     </div>
@@ -70,22 +74,24 @@
         <div class="row">
             <div class="col-md-6 d-flex">
                 <div class="my-auto">
-                    <h2 class="mb-4 ">Ready to embark on the first journey of the Nebula?</h2>
+                    <h2 class="mb-4 ">Ready to embark on the first journey of the Cosmo?</h2>
                     <p>Embark on an intergalactic adventure in this fantasy language-learning game! 🚀 As a starship
                         pilot,
-                        you'll navigate mystical galaxies, each representing a different language. Choose your Nebula,
+                        you'll navigate mystical galaxies, each representing a different language. Choose your Cosmo,
                         follow the cosmic roadmap, and conquer grammar challenges to forge brilliant stars. Master the
                         universe, one word at a time! ✨</p>
                 </div>
             </div>
-            <div class="col-md-6 position-relative">
-                <img src="assets/images/img.png"
-                     alt="Game Image"
-                     class="img-fluid rounded w-100 wow fadeIn"
-                     data-wow-offset="500"
-                     data-wow-delay="0.25s"
-                     data-wow-duration="2s">
-                <div class="snowflake"></div>
+            <div class="col-md-6 ">
+                <div class="position-relative">
+                    <img src="assets/images/img.png"
+                         alt="Game Image"
+                         class="img-fluid rounded w-100 wow fadeIn"
+                         data-wow-offset="500"
+                         data-wow-delay="0.25s"
+                         data-wow-duration="2s">
+                    <div class="snowflake"></div>
+                </div>
             </div>
         </div>
     </div>
@@ -110,7 +116,7 @@
 </section>
 
 <!-- Section 4: Gallery -->
-<section class="wow fadeInLeft" data-wow-delay="0.2s">
+<section id="gallery" class="wow fadeInLeft" data-wow-delay="0.2s">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-5 d-flex">
@@ -119,7 +125,7 @@
                     <p>Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing
                         encounters.
                         Complete this extraordinary audio-visual journey!
-                        Every moment in Nebula is designed to captivate your senses and ignite your imagination.
+                        Every moment in Cosmo is designed to captivate your senses and ignite your imagination.
                     </p>
                 </div>
             </div>
@@ -159,7 +165,7 @@
 <!-- Section 5: Multi-Device Support -->
 <section class="wow fadeInRight" data-wow-delay="0.2s">
     <div class="container-fluid">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-items-center">
             <div class="col-md-4">
                 <img src="assets/images/multidevice.webp" alt="Devices" class="img-fluid rounded">
             </div>
@@ -177,13 +183,12 @@
 
 
 <!-- Section 6: NPCs -->
-<!-- Section 6: NPCs -->
 <section class="wow fadeInLeft" data-wow-delay="0.2s">
     <div class="container-fluid">
         <h2 class="text-center mb-4">Meet the guardians</h2>
         <div class="row text-center mb-5 justify-content-center">
             <div class="col-md-6">
-                The sacred nebula has generated some lighting to guide human beings throughout their dreams.
+                The sacred cosmo has generated some lighting to guide human beings throughout their dreams.
                 They are the Espada, the Guardians of the land of wonder!
             </div>
         </div>
@@ -194,7 +199,10 @@
                         <img src="assets/images/npc-1.png" alt="Jota" class="img-fluid rounded npc-image">
                     </div>
                     <h5>Jota</h5>
-                    <p class="npc-desc">A silent sentinel from the nebula's edge, Jota moves like starlight, her past veiled in cosmic dust. Whispers speak of a forgotten war, and the celestial burden she carries.</p>
+                    <div class="npc-desc">
+                        A silent sentinel from the cosmo's edge</br>
+                        Jota moves like starlight, her past veiled in cosmic dust. Whispers speak of a forgotten war, and the celestial burden she carries.
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -203,7 +211,10 @@
                         <img src="assets/images/npc-2.png" alt="Nunez" class="img-fluid rounded npc-image">
                     </div>
                     <h5>Nunez</h5>
-                    <p class="npc-desc">Nunez is the keeper of the Nebula's tranquil heart. His touch weaves the very fabric of dreams, guiding lost souls to restful slumber and rejuvenating the weary with celestial energy.</p>
+                    <div class="npc-desc">
+                        Nunez is the keeper of the cosmo's tranquil heart.</br>
+                        His touch weaves the very fabric of dreams, guiding lost souls to restful slumber and rejuvenating the weary with celestial energy.
+                    </div>
                 </div>
             </div>
             <div class="col-md-4">
@@ -212,8 +223,9 @@
                         <img src="assets/images/npc-3.png" alt="Salah" class="img-fluid rounded npc-image">
                     </div>
                     <h5>Phao</h5>
-                    <p class="npc-desc">(Phao to her friends, yes, she is friends with everyone)
-                        A mischievous sprite born from the Nebula's brightest hues. Though her tongue is quick and playful, her heart is as vast as the starry expanse.</p>
+                    <div class="npc-desc">(Phao to her friends, yes, she is friends with everyone)<br/>
+                        A mischievous sprite born from the cosmo's brightest hues. Though her tongue is quick and playful, her heart is as vast as the starry expanse.
+                    </div>
                 </div>
             </div>
         </div>
@@ -221,57 +233,130 @@
 </section>
 
 <!-- Section 7: Special Feature -->
-<section class="wow fadeInRight" data-wow-delay="0.2s">
-    <div class="container-fluid text-center">
-        <h2 class="mb-4">Collect the Alphabet</h2>
-        <p>Click the diamond to reveal a random character!</p>
-        <img src="diamond.png" alt="Diamond" class="diamond-feature my-4" style="max-width: 100px;">
-        <p id="random-char" class="display-6"></p>
+<section id="special-feature" class="wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4">Who is behind the theft of the letters?</h2>
+                    <p>Something strange is happening across the galaxy. A mysterious force is stealing the letters that unite all the races of the cosmos. Without these essential symbols, their beautiful languages crumble, and civilizations fall into disarray. It's up to you to rediscover these precious letters and restore peace. Click the diamond to uncover the first clue!</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="my-auto w-100 py-5">
+                    <div class="playable-container">
+                        <div class="playable">
+                            <img class="playable-effect effect-1 wow rotateOut"
+                                 data-wow-iteration="infinite"
+                                 data-wow-duration="40s"
+                                 src="assets/images/playable.affect.1.png" alt=""/>
+
+                            <img class="playable-effect effect-2 wow rotateOut"
+                                 data-wow-duration="40s"
+                                 data-wow-iteration="infinite"
+                                 src="assets/images/playable.affect.2.png" alt=""/>
+
+                            <img class="playable-effect effect-3 wow rotateOut"
+                                 data-wow-duration="40s"
+                                 data-wow-iteration="infinite"
+                                 src="assets/images/playable.affect.3.png" alt=""/>
+                            <img id="diamond" src="assets/images/diamond.png" alt="Diamond"
+                                 class="diamond-feature animated pulse slow infinite">
+                            <span id="letter-count">0</span>
+                        </div>
+
+                        <div id="letter-container">
+                            <!-- Letters will appear here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </div>
 </section>
-
 <!-- Section 8: Made With -->
 <section class="wow fadeInLeft" data-wow-delay="0.2s">
     <div class="container-fluid text-center">
-        <h2 class="mb-4">Made With</h2>
-        <div class="row">
-            <div class="col-md-2">Unity</div>
-            <div class="col-md-2">Blender</div>
-            <div class="col-md-2">Canva</div>
-            <div class="col-md-2">ChatGPT</div>
-            <div class="col-md-2">GeminiAI</div>
+        <h2 class="mb-4">Made with</h2>
+        <p>CosmoLinq was developed using these amazing tools and technologies:</p>
+
+        <div class="row mt-5">
+            <div class="col-3 col-md-3">
+                <img alt="Unity"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_8424e91ebae64303a8ffa4c011967920~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810833.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Blender"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_b2819b111cd9418c95552806ea737a8a~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810764.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Figma"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_806c9be2be004c00801b9840656cc1a8~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810780.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Canva"
+                     class="img-fluid img-made-with"
+                     src="https://i.rada.vn/data/image/2023/07/10/Canva-200-size-105x105-znd.png"/>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Section 9: About the Team -->
-<section class="wow fadeInRight" data-wow-delay="0.2s">
+<section id="team" class="wow fadeInRight" data-wow-delay="0.2s">
     <div class="container text-center">
         <h2 class="mb-4">Our Team</h2>
         <div class="row">
-            <div class="col-md-4">Hoa</div>
-            <div class="col-md-4">Tercio</div>
-            <div class="col-md-4">Hyy</div>
+            <div class="col-md-4 order-1 order-md-2 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/hyy.jpg"
+                    />
+                </div>
+                <h4>Hyy</h4>
+            </div>
+            <div class="col-md-4 order-2 order-md-1 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/hyyy.webp"
+                    />
+                </div>
+                <h4>Hoa</h4>
+            </div>
+            <div class="col-md-4 order-3 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/ter.jpg"
+                    />
+                </div>
+                <h4>Tercio</h4>
+            </div>
         </div>
     </div>
 </section>
 
 <!-- Section 10: Subscribe Form -->
-<section id="subscribe" class="section-padding wow fadeInUp" data-wow-delay="0.2s">
-    <div class="container text-center">
-        <h2 class="mb-4">Subscribe</h2>
-        <form class="d-flex justify-content-center">
-            <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">
-            <button type="submit" class="btn btn-fantasy">Submit</button>
-        </form>
-    </div>
-</section>
+<!--<section id="subscribe" class="section-padding wow fadeInUp" data-wow-delay="0.2s">-->
+<!--    <div class="container text-center">-->
+<!--        <h2 class="mb-4">Subscribe</h2>-->
+<!--        <form class="d-flex justify-content-center">-->
+<!--            <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">-->
+<!--            <button type="submit" class="btn btn-fantasy">Submit</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</section>-->
 
 <div id="custom-cursor"></div>
 <!-- Section 11: Footer -->
-<footer class="bg-dark text-center py-4">
-    <p>&copy; 2025 Ngan Ha Da Ngu. All rights reserved.</p>
-</footer>
+<footer class="text-center py-1 small">&copy; 2025 CosmoLinq. All rights reserved.</footer>
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
