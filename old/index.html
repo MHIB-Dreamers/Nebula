@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CosmoLinq</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/icon.png" />
+
+    <link rel="stylesheet" href="assets/css/normalize.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/animate.compat.min.css">
+</head>
+<body>
+<!-- Section 1: Header -->
+<header class="heading">
+    <div class="section-overlay">
+        <img src="assets/images/frame.shadow.png" alt=""/>
+    </div>
+    <div class="header-content">
+        <img src="assets/images/logo.png" alt="" class="logo">
+
+        <button class="btn btn-default wow shakeY mt-3"
+                data-wow-duration="30s"
+                data-wow-iteration="infinite">
+            <span>Play now</span>
+        </button>
+        <a href="javascript:;" class="btn btn-secondary mt-5">
+            <span>Subscribe for the first journey</span>
+        </a>
+    </div>
+
+    <img class="header-effect effect-1 wow rotateIn"
+         data-wow-duration="50s"
+         data-wow-iteration="infinite"
+         src="assets/images/header.effect.1.png"
+         alt=""/>
+
+    <img class="header-effect effect-2"
+         src="assets/images/header.effect.2.png" alt=""/>
+
+    <img class="header-effect effect-3"
+         src="assets/images/header.effect.3.png" alt=""/>
+
+    <img class="header-effect effect-4 wow rotateOut"
+         data-wow-duration="50s"
+         data-wow-iteration="infinite"
+         src="assets/images/header.effect.4.png" alt=""/>
+</header>
+
+<!-- Sticky Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+            <img src="assets/images/icon.png" alt="" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#trailer">Trailer</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#special-feature">Missing Letters</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Section 2: About the Game -->
+<section id="about">
+    <div class="container-fluid fullscreen">
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4 ">Ready to embark on the first journey of the Cosmo?</h2>
+                    <p>Embark on an intergalactic adventure in this fantasy language-learning game! 🚀 As a starship
+                        pilot,
+                        you'll navigate mystical galaxies, each representing a different language. Choose your Cosmo,
+                        follow the cosmic roadmap, and conquer grammar challenges to forge brilliant stars. Master the
+                        universe, one word at a time! ✨</p>
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="position-relative">
+                    <img src="assets/images/img.png"
+                         alt="Game Image"
+                         class="img-fluid rounded w-100 wow fadeIn"
+                         data-wow-offset="500"
+                         data-wow-delay="0.25s"
+                         data-wow-duration="2s">
+                    <div class="snowflake"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 3: Video Trailer -->
+<section id="trailer"
+         class="wow fadeIn fullscreen"
+         data-wow-duration="2s"
+         data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="ratio ratio-16x9">
+            <div class="backdrop-shadow"></div>
+            <iframe id="youtube-iframe"
+                    src="https://www.youtube.com/embed/QcX96Q6ZIu4?&enablejsapi=1"
+                    frameborder="0"
+                    allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; autoplay"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- Section 4: Gallery -->
+<section id="gallery" class="wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4">A Cinematic Video Game by DREAMERS</h2>
+                    <p>Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing
+                        encounters.
+                        Complete this extraordinary audio-visual journey!
+                        Every moment in Cosmo is designed to captivate your senses and ignite your imagination.
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div id="carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="https://static.wixstatic.com/media/037b93_59ccce6bd01248b4a52d70007baa505f~mv2.webp/v1/fill/w_1120,h_487,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720947732.webp"
+                                 class="d-block w-100" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="https://static.wixstatic.com/media/037b93_527346b6a6054bf58abdd41a3e9c20ed~mv2.webp/v1/fill/w_1120,h_487,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720947742.webp"
+                                 class="d-block w-100" alt="">
+                        </div>
+
+                    </div>
+                    <button class="carousel-control-prev"
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next"
+                            type="button"
+                            data-bs-target="#carousel"
+                            data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 5: Multi-Device Support -->
+<section class="wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-4">
+                <img src="assets/images/multidevice.webp" alt="Devices" class="img-fluid rounded">
+            </div>
+            <div class="col-md-5">
+                <h2 class="mb-4">Playable on multiplatform</h2>
+                <p>Available on iOS, Android, and Steam for Windows.
+                    This game is a challenge to the status quo of online 3D games,
+                    pushing the boundaries of what’s possible in gaming.
+                    Immerse yourself in the magical world with stunning visuals and seamless gameplay,
+                    no matter where you are or what device you use. </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Section 6: NPCs -->
+<section class="wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <h2 class="text-center mb-4">Meet the guardians</h2>
+        <div class="row text-center mb-5 justify-content-center">
+            <div class="col-md-6">
+                The sacred cosmo has generated some lighting to guide human beings throughout their dreams.
+                They are the Espada, the Guardians of the land of wonder!
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <div class="npc-image-container">
+                        <img src="assets/images/npc-1.png" alt="Jota" class="img-fluid rounded npc-image">
+                    </div>
+                    <h5>Jota</h5>
+                    <div class="npc-desc">
+                        A silent sentinel from the cosmo's edge</br>
+                        Jota moves like starlight, her past veiled in cosmic dust. Whispers speak of a forgotten war, and the celestial burden she carries.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <div class="npc-image-container">
+                        <img src="assets/images/npc-2.png" alt="Nunez" class="img-fluid rounded npc-image">
+                    </div>
+                    <h5>Nunez</h5>
+                    <div class="npc-desc">
+                        Nunez is the keeper of the cosmo's tranquil heart.</br>
+                        His touch weaves the very fabric of dreams, guiding lost souls to restful slumber and rejuvenating the weary with celestial energy.
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="npc-card text-center">
+                    <div class="npc-image-container">
+                        <img src="assets/images/npc-3.png" alt="Salah" class="img-fluid rounded npc-image">
+                    </div>
+                    <h5>Phao</h5>
+                    <div class="npc-desc">(Phao to her friends, yes, she is friends with everyone)<br/>
+                        A mischievous sprite born from the cosmo's brightest hues. Though her tongue is quick and playful, her heart is as vast as the starry expanse.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 7: Special Feature -->
+<section id="special-feature" class="wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6 d-flex">
+                <div class="my-auto">
+                    <h2 class="mb-4">Who is behind the theft of the letters?</h2>
+                    <p>Something strange is happening across the galaxy. A mysterious force is stealing the letters that unite all the races of the cosmos. Without these essential symbols, their beautiful languages crumble, and civilizations fall into disarray. It's up to you to rediscover these precious letters and restore peace. Click the diamond to uncover the first clue!</p>
+                </div>
+            </div>
+            <div class="col-md-6 d-flex">
+                <div class="my-auto w-100 py-5">
+                    <div class="playable-container">
+                        <div class="playable">
+                            <img class="playable-effect effect-1 wow rotateOut"
+                                 data-wow-iteration="infinite"
+                                 data-wow-duration="40s"
+                                 src="assets/images/playable.affect.1.png" alt=""/>
+
+                            <img class="playable-effect effect-2 wow rotateOut"
+                                 data-wow-duration="40s"
+                                 data-wow-iteration="infinite"
+                                 src="assets/images/playable.affect.2.png" alt=""/>
+
+                            <img class="playable-effect effect-3 wow rotateOut"
+                                 data-wow-duration="40s"
+                                 data-wow-iteration="infinite"
+                                 src="assets/images/playable.affect.3.png" alt=""/>
+                            <img id="diamond" src="assets/images/diamond.png" alt="Diamond"
+                                 class="diamond-feature animated pulse slow infinite">
+                            <span id="letter-count">0</span>
+                        </div>
+
+                        <div id="letter-container">
+                            <!-- Letters will appear here -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- Section 8: Made With -->
+<section class="wow fadeInLeft" data-wow-delay="0.2s">
+    <div class="container-fluid text-center">
+        <h2 class="mb-4">Made with</h2>
+        <p>CosmoLinq was developed using these amazing tools and technologies:</p>
+
+        <div class="row mt-5">
+            <div class="col-3 col-md-3">
+                <img alt="Unity"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_8424e91ebae64303a8ffa4c011967920~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810833.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Blender"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_b2819b111cd9418c95552806ea737a8a~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810764.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Figma"
+                     class="img-fluid img-made-with"
+                     src="https://static.wixstatic.com/media/037b93_806c9be2be004c00801b9840656cc1a8~mv2.webp/v1/fill/w_88,h_88,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/immagine_1720810780.webp"/>
+            </div>
+            <div class="col-3 col-md-3">
+                <img alt="Canva"
+                     class="img-fluid img-made-with"
+                     src="https://i.rada.vn/data/image/2023/07/10/Canva-200-size-105x105-znd.png"/>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 9: About the Team -->
+<section id="team" class="wow fadeInRight" data-wow-delay="0.2s">
+    <div class="container text-center">
+        <h2 class="mb-4">Our Team</h2>
+        <div class="row">
+            <div class="col-md-4 order-1 order-md-2 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/hyy.jpg"
+                    />
+                </div>
+                <h4>Hyy</h4>
+            </div>
+            <div class="col-md-4 order-2 order-md-1 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/hyyy.webp"
+                    />
+                </div>
+                <h4>Hoa</h4>
+            </div>
+            <div class="col-md-4 order-3 member">
+                <div class="img-member">
+                    <img alt="Hyy"
+                         class="img-fluid"
+                         src="assets/images/ter.jpg"
+                    />
+                </div>
+                <h4>Tercio</h4>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 10: Subscribe Form -->
+<!--<section id="subscribe" class="section-padding wow fadeInUp" data-wow-delay="0.2s">-->
+<!--    <div class="container text-center">-->
+<!--        <h2 class="mb-4">Subscribe</h2>-->
+<!--        <form class="d-flex justify-content-center">-->
+<!--            <input type="email" class="form-control w-50 me-2" placeholder="Enter your email">-->
+<!--            <button type="submit" class="btn btn-fantasy">Submit</button>-->
+<!--        </form>-->
+<!--    </div>-->
+<!--</section>-->
+
+<div id="custom-cursor"></div>
+<!-- Section 11: Footer -->
+<footer class="text-center py-1 small">&copy; 2025 CosmoLinq. All rights reserved.</footer>
+
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
