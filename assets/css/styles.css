@@ -273,9 +273,10 @@ section .center-section {
     margin-bottom: 40px;
 }
 
-.journey-img {
+.journey-section .landing {
     width: 100%;
-    max-width: 800px;
+    height: auto;
+    object-fit: cover;
 }
 .journey-visual-section .object {
     object-fit: cover;
@@ -317,15 +318,15 @@ section .center-section {
     z-index: 1;
 }
 .journey-visual-section .object-5 {
-    width: 17vw;
+    width: 20%;
     left: 25%;
-    bottom: 11%;
+    bottom: 6%;
 }
 .journey-visual-section .object-6 {
     width: 30vw;
     left: -1rem;
     bottom: -1.5rem;
-    z-index: 1;
+    z-index: 2;
 }
 .journey-visual-section .object-7 {
     width: 50vw;
@@ -338,7 +339,7 @@ section .center-section {
     width: 7rem;
     left: 15%;
     bottom: 15%;
-    z-index: 1;
+    z-index: 0;
 }
 .journey-visual-section .object-9 {
     width: 7rem;
@@ -349,7 +350,7 @@ section .center-section {
 .journey-visual-section .object-10 {
     width: 40vw;
     left: 0;
-    bottom: -2rem;
+    bottom: -3rem;
     z-index: -2;
 }
 /* Section 5: Floating Islands */
@@ -425,6 +426,14 @@ section.landing-section {
     transform: translate(0, 0);
 }
 
+.members {
+    /*display: flex;*/
+
+}
+.members .member {
+    display: inline-block;
+    padding: 1rem 3rem;
+}
 .team-section .object-container .object-1 {
     bottom: 0;
     left: -5vw;
@@ -433,7 +442,7 @@ section.landing-section {
 }
 
 .team-section .object-container .object-2 {
-    bottom: 20rem;
+    bottom: 20%;
     left: 0;
     width: 30vw;
     z-index: 0;
@@ -502,7 +511,7 @@ footer {
     padding: 20px;
     text-align: center;
     background: #0a0a23;
-    font-size: 14px;
+    font-size: .8rem
 }
 
 .anim-float {
@@ -521,12 +530,13 @@ footer {
 
 @media (min-width:768px) {
     .journey-section {
-        --second-row-gap: 14rem;
+        --second-row-gap: 6rem;
 
         height: calc(100vh - var(--second-row-gap) / 2);
     }
     .journey-section .second-row {
         position: relative;
-        top: calc(var(--second-row-gap) * -1)
+        top: calc(var(--second-row-gap) * -1);
+        transform: translateY(-50%);
     }
 }
