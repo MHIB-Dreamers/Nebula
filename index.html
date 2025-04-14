@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-grid.min.css">
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-utilities.min.css">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 </head>
 <body>
 <!-- Section 1: Header with Planets -->
@@ -19,7 +21,7 @@
     <img src="placeholder-planet4.png" alt="Planet 4" class="planet planet4">
   </div>
 
-  <h6 class="title center-section text-outline">Each language unlocks a new soul - a gateway to unseen worlds</h6>
+  <h6 class="title center-section text-outline container-fluid text-center">Each language unlocks a new soul - a gateway to unseen worlds</h6>
   <button type="button" class="btn">Enter</button>
 </section>
 
@@ -32,7 +34,7 @@
     <img src="assets/images/intro-object-4.png" alt="" class="object object-4">
   </div>
 
-  <div class="intro-content center-section container">
+  <div class="intro-content center-section container container-fluid">
     <h6 class="title">Ready to embark on the first journey of the Cosmo?</h6>
     <p>Embark on an intergalactic adventure in this fantasy language-learning game! 🚀
       As a starship pilot, you'll navigate mystical galaxies, each representing a different
@@ -47,11 +49,11 @@
 
 <!-- Section 3: Language Selection -->
 <section class="language-section fullscreen">
-  <h6 class="title">Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing encounters.</h6>
+  <h6 class="title container-fluid">Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing encounters.</h6>
   <div class="planet-chain-container">
     <img src="assets/images/planet-chain.png" alt="" class="planet-chain"/>
   </div>
-  <div class="language-cards container">
+  <div class="language-cards container d-none d-md-flex">
     <div class="card">
       <p>Chinese</p>
       <img src="assets/images/chinese-card.jpg" alt="Chinese">
@@ -69,31 +71,66 @@
       <img src="assets/images/korean-card.jpg" alt="Korean">
     </div>
   </div>
+
+  <div class="d-md-none container-fluid">
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide">
+          <p class="mb-2">Chinese</p>
+          <img src="assets/images/chinese-card.jpg" alt="Chinese" class="img-fluid rounded-4">
+        </div>
+        <div class="swiper-slide">
+          <p class="mb-2">Vietnamese</p>
+          <img src="assets/images/vietnamese-card.jpg" alt="Vietnamese" class="img-fluid rounded-4">
+        </div>
+        <div class="swiper-slide">
+          <p class="mb-2">English</p>
+          <img src="assets/images/english-card.jpg" alt="English" class="img-fluid rounded-4">
+        </div>
+        <div class="swiper-slide">
+          <p class="mb-2">Korean</p>
+          <img src="assets/images/korean-card.jpg" alt="Korean" class="img-fluid rounded-4">
+        </div>
+      </div>
+
+      <!-- If we need navigation buttons -->
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+
+      <!-- If we need scrollbar -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+  </div>
 </section>
 
 <!-- Section 4: Journey Progress -->
 <section class="journey-section fullscreen">
-  <div class="row align-items-center">
-    <div class="col-md-6 order-1 order-md-0">
-      <div class="language-cards">
-        <img src="assets/images/language-selection.jpg" alt="" class="language-card-image"/>
-        <span class="language bottom language-1">English</span>
-        <span class="language top language-2">Korean</span>
-        <span class="language bottom language-3">Chinese</span>
-        <span class="language top language-4">Vietnamese</span>
+  <div class="container-fluid">
+    <div class="row align-items-center">
+      <div class="col-md-6 order-1 order-md-0">
+        <div class="language-cards">
+          <img src="assets/images/language-selection.jpg" alt="" class="language-card-image"/>
+          <span class="language bottom language-1">English</span>
+          <span class="language top language-2">Korean</span>
+          <span class="language bottom language-3">Chinese</span>
+          <span class="language top language-4">Vietnamese</span>
+        </div>
+      </div>
+      <div class="col-md-6 order-0 order-md-1">
+        <p class="text-center text-md-start mb-2">select the language that you will immerge</p>
       </div>
     </div>
-    <div class="col-md-6 order-0 order-md-1">
-      <p class="text-center text-md-start">select the language that you will immerge</p>
-    </div>
-  </div>
 
-  <div class="row align-items-center second-row">
-    <div class="col-md-6">
-      <p class="text-center text-md-end">Landing on its galaxy</p>
-    </div>
-    <div class="col-md-6">
-      <img src="assets/images/landing-galaxy.gif" alt="Landing on its galaxy" class="rounded-5">
+    <div class="row align-items-center second-row">
+      <div class="col-md-6">
+        <p class="text-center text-md-end mb-2">Landing on its galaxy</p>
+      </div>
+      <div class="col-md-6">
+        <img src="assets/images/landing-galaxy.gif" alt="Landing on its galaxy" class=" img-fluid rounded-5">
+      </div>
     </div>
   </div>
 </section>
@@ -142,23 +179,28 @@
 
 <!-- Section 6: Team Info -->
 <section class="team-section fullscreen">
-  <div class="object-container">
-    <img src="assets/images/member-1.png" alt="" class="object object-1">
-    <img src="assets/images/member-2.png" alt="" class="object object-2">
-    <img src="assets/images/member-3.png" alt="" class="object object-3">
-    <img src="assets/images/team-pref.png" alt="" class="object object-4">
-  </div>
-
-  <div class="team-content center-section container">
-    <h6 class="title">Meet the Team</h6>
-    <div class="members">
-      <div class="member">Tercio</div>
-      <div class="member">풍화</div>
-      <div class="member">雅芳</div>
-    </div>
+  <div class="team-container container">
+    <h2>Meet the Team</h2>
     <p>We are a group which is   passionate about
       languages, games, and technology, with a mission to
-      help you learn languages in the most enjoyable way !"</p>
+      help you learn languages in the most enjoyable way !</p>
+    <div class="team-members">
+      <div class="member">
+        <img src="assets/images/member-3.png" alt="Nha Phuong" class="member-img">
+        <h3>雅芳</h3>
+        <div class="member-position">English Language</div>
+      </div>
+      <div class="member">
+        <img src="assets/images/member-2.png" alt="Hoa" class="member-img">
+        <h3>풍화</h3>
+        <div class="member-position">Business & Big data AI</div>
+      </div>
+      <div class="member">
+        <img src="assets/images/member-1.png" alt="Tercio" class="member-img">
+        <h3>Tercio</h3>
+        <div class="member-position">Software Engineer</div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -172,5 +214,8 @@
 <footer>
   <p>&copy; 2025 Space Adventure. Designed by Dreamers.</p>
 </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/app.js"></script>
 </body>
 </html>

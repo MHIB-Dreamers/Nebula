@@ -11,8 +11,10 @@
     font-weight: normal;
     font-style: normal;
 }
+
 html {
     font-size: 1.25rem;
+    overflow-x: hidden;
 }
 
 body {
@@ -21,11 +23,19 @@ body {
     overflow-x: hidden;
 }
 
+.img-fluid {
+    max-width: 100%;
+    height: auto
+}
+
+section {
+}
+
 section.fullscreen {
     min-height: 100vh;
     width: 100%;
     position: relative;
-    padding: 3rem;
+    padding: 3rem 0;
     overflow: hidden;
 }
 
@@ -48,16 +58,15 @@ section .center-section {
     justify-content: center;
     align-items: center;
     position: relative;
-    background: url('../images/hero-section-bg.jpg') no-repeat center/cover;
+    background: url('../images/hero-section-bg.png') no-repeat center/cover;
 }
 
 
 .text-outline {
-    text-shadow:
-            -2px -2px 1px black,
-            2px -2px 1px black,
-            -2px 2px 1px black,
-            2px 2px 1px black;
+    text-shadow: -2px -2px 1px black,
+    2px -2px 1px black,
+    -2px 2px 1px black,
+    2px 2px 1px black;
 }
 
 .object-container {
@@ -138,6 +147,7 @@ section .center-section {
     text-align: center;
     background: url('../images/intro-section-bg.jpg') repeat, linear-gradient(180deg, #0a0a23, #1a1a3d);
 }
+
 .intro-section .intro-content {
 
 }
@@ -155,7 +165,7 @@ section .center-section {
 }
 
 .intro-section .object-container .object-1 {
-    top: calc(50% - 12rem);
+    top: 7rem;
     left: 50%;
     object-fit: cover;
     width: 8rem;
@@ -189,11 +199,11 @@ section .center-section {
 
 .satellite {
     position: absolute;
-    max-width: 50vw;
+    max-width: 20rem;
     object-fit: cover;
     opacity: 0.65;
     z-index: 1;
-    bottom: -7rem;
+    bottom: -1rem;
     left: -4rem;
 }
 
@@ -216,9 +226,10 @@ section .center-section {
     height: 7rem;
     width: 100%;
 }
+
 .language-section .planet-chain {
     position: absolute;
-    max-width: 20rem;
+    max-width: 100%;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%) rotate(90deg);
@@ -264,7 +275,7 @@ section .center-section {
 
 .journey-section .language-cards .language-card-image {
     width: 100%;
-    height: var(--language-card-image-height);
+    height: auto;
     object-fit: cover;
 }
 
@@ -277,6 +288,7 @@ section .center-section {
     width: 100%;
     max-width: 800px;
 }
+
 .journey-visual-section .object {
     object-fit: cover;
     transform: translate(0, 0);
@@ -288,12 +300,14 @@ section .center-section {
     top: 0;
     z-index: -2;
 }
+
 .journey-visual-section .object-1 {
     width: 60vw;
     right: 0;
     top: 0;
     z-index: 1;
 }
+
 .journey-visual-section .object-2 {
     width: 40vw;
     object-fit: cover;
@@ -316,17 +330,20 @@ section .center-section {
     bottom: 5%;
     z-index: 1;
 }
+
 .journey-visual-section .object-5 {
     width: 17vw;
     left: 25%;
     bottom: 11%;
 }
+
 .journey-visual-section .object-6 {
     width: 30vw;
     left: -1rem;
     bottom: -1.5rem;
     z-index: 1;
 }
+
 .journey-visual-section .object-7 {
     width: 50vw;
     left: 37%;
@@ -334,24 +351,28 @@ section .center-section {
     transform: translate(-50%, -50%);
     z-index: -1;
 }
+
 .journey-visual-section .object-8 {
     width: 7rem;
     left: 15%;
     bottom: 15%;
     z-index: 1;
 }
+
 .journey-visual-section .object-9 {
     width: 7rem;
     left: 5%;
     bottom: 10%;
     z-index: 1;
 }
+
 .journey-visual-section .object-10 {
     width: 40vw;
     left: 0;
     bottom: -2rem;
     z-index: -2;
 }
+
 /* Section 5: Floating Islands */
 section.landing-section {
     padding: 15% 0;
@@ -375,99 +396,47 @@ section.landing-section {
     bottom: -7rem;
     width: 25vw;
 }
+
 .flying-landing-section .object-2 {
     left: 45%;
     bottom: 3rem;
     width: 30vw;
 }
+
 .flying-landing-section .object-3 {
     left: 64%;
     bottom: 25vh;
     width: 25vw;
     z-index: 0;
 }
+
 .flying-landing-section .object-4 {
     left: 24vw;
     bottom: 7vh;
     width: 53vw;
     z-index: 0;
 }
+
 .flying-landing-section .object-5 {
     left: 53%;
     bottom: 2rem;
     width: 30vw;
     opacity: .8;
 }
+
 .flying-landing-section .object-6 {
     left: 64%;
     bottom: 15vh;
     width: 35vw;
     z-index: 0;
 }
+
 .flying-landing-section .object-7 {
     left: 75%;
     bottom: 30vh;
     width: 30vw;
     z-index: 0;
     rotate: 180deg;
-}
-/* Section 6: Team Section */
-.team-section {
-    padding: 100px 20px;
-    text-align: center;
-
-    background: url('../images/team-bg.jpg') no-repeat center/cover, linear-gradient(180deg, #2a2a5a, #3a3a7a);
-}
-
-.team-section .object {
-    object-fit: cover;
-    height: auto;
-    transform: translate(0, 0);
-}
-
-.team-section .object-container .object-1 {
-    bottom: 0;
-    left: -5vw;
-    width: 30vw;
-    z-index: 1;
-}
-
-.team-section .object-container .object-2 {
-    bottom: 20rem;
-    left: 0;
-    width: 30vw;
-    z-index: 0;
-}
-.team-section .object-container .object-3 {
-    bottom: 0;
-    left: 18vw;
-    width: 18vw;
-    z-index: 1;
-    transform: scale(-1, 1);
-}
-.team-section .object-container .object-4 {
-    bottom: 0;
-    right: 3rem;
-    width: 40vw;
-    z-index: 1;
-}
-
-.team-content {
-    font-size: 1.5rem;
-}
-.team-section h2 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.team-section p {
-    font-size: 18px;
-    max-width: 600px;
-    margin: 0 auto 40px;
-}
-
-.team-img {
-    width: 300px;
 }
 
 /* Section 7: Call to Action */
@@ -497,6 +466,10 @@ section.landing-section {
     scale: 1.1;
 }
 
+.galaxy-path-1, .galaxy-path-2, .galaxy-path-3 {
+    max-width: 30vw;
+}
+
 /* Footer */
 footer {
     padding: 20px;
@@ -519,14 +492,107 @@ footer {
     }
 }
 
-@media (min-width:768px) {
+@media (min-width: 768px) {
     .journey-section {
         --second-row-gap: 14rem;
 
         height: calc(100vh - var(--second-row-gap) / 2);
     }
+
     .journey-section .second-row {
         position: relative;
         top: calc(var(--second-row-gap) * -1)
+    }
+
+    .intro-section .object-container .object-1 {
+        top: calc(50% - 12rem);
+    }
+
+    .satellite {
+        max-width: 40%;
+        bottom: -7rem;
+    }
+
+    .journey-section .language-cards .language-card-image {
+        height: var(--language-card-image-height);
+    }
+}
+
+.swiper {
+    width: 100%;
+    height: 25rem;
+    --swiper-theme-color: #fff;
+}
+
+
+/* Section 6: Team Section */
+.team-section {
+    text-align: center;
+    flex-direction: column;
+    padding: 2rem 1rem; /* Giảm padding để tối ưu cho mobile */
+    background: url('../images/team-bg.jpg') no-repeat center/cover, linear-gradient(180deg, #2a2a5a, #3a3a7a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-section h2 {
+    margin-bottom: 1.5rem;
+}
+
+.team-section p {
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+}
+
+.team-members {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột trên desktop */
+    gap: 2rem;
+    justify-items: center;
+}
+
+.member {
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.member-img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; /* Đảm bảo hình ảnh không bị méo, cắt phần thừa */
+    border-radius: 50%; /* Biến hình ảnh thành hình tròn */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #feff;
+    margin-bottom: 1rem;
+}
+
+.member:hover .member-img {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 77, 77, 0.5);
+}
+.member .member-position {
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    color: #e8e7e7;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .team-members {
+        grid-template-columns: 1fr; /* Xếp chồng dọc trên mobile */
+        gap: 1rem;
+    }
+
+    .member-img {
+        max-width: 250px; /* Giảm kích thước ảnh trên mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .member-img {
+        max-width: 200px; /* Giảm thêm kích thước trên màn hình nhỏ */
     }
 }
