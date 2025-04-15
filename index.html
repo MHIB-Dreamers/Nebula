@@ -10,10 +10,11 @@
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-utilities.min.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css" />
 </head>
-<body>
+<body id="body">
 <!-- Section 1: Header with Planets -->
-<section class="hero-section fullscreen">
+<section class="hero-section fullscreen" id="hero-section">
   <div class="object-container">
     <!-- Placeholder cho các hành tinh -->
 <!--    <img src="placeholder-planet1.png" alt="Planet 1" class="planet planet1">-->
@@ -27,7 +28,7 @@
 </section>
 
 <!-- Section 2: Introduction -->
-<section class="intro-section fullscreen">
+<section class="intro-section fullscreen" id="intro-section">
   <div class="object-container">
     <img src="assets/images/intro-object-1.png" alt="" class="object object-1">
     <img src="assets/images/intro-object-2.png" alt="" class="object object-2">
@@ -49,7 +50,7 @@
 </div>
 
 <!-- Section 3: Language Selection -->
-<section class="language-section fullscreen">
+<section class="language-section fullscreen" id="language-section">
   <h6 class="title container-fluid">Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing encounters.</h6>
   <div class="planet-chain-container">
     <img src="assets/images/planet-chain.png" alt="" class="planet-chain"/>
@@ -108,35 +109,27 @@
 </section>
 
 <!-- Section 4: Journey Progress -->
-<section class="journey-section fullscreen">
-  <div class="container-fluid">
-    <div class="row align-items-center">
-      <div class="col-md-6 order-1 order-md-0">
-        <div class="language-cards">
-          <img src="assets/images/language-selection.jpg" alt="" class="language-card-image"/>
-<!--          <span class="language bottom language-1">English</span>-->
-<!--          <span class="language top language-2">Korean</span>-->
-<!--          <span class="language bottom language-3">Chinese</span>-->
-<!--          <span class="language top language-4">Vietnamese</span>-->
-        </div>
-      </div>
-      <div class="col-md-6 order-0 order-md-1">
-        <p class="text-center text-md-start mb-2">select the language that you will immerge</p>
-      </div>
-    </div>
 
-    <div class="row align-items-center second-row">
-      <div class="col-md-6">
-        <p class="text-center text-md-end mb-2">Landing on its galaxy</p>
-      </div>
-      <div class="col-md-6">
-        <img src="assets/images/landing-galaxy.gif" alt="Landing on its galaxy" class=" img-fluid rounded-5">
-      </div>
-    </div>
-  </div>
+<section class="journey-section fullscreen" id="journey-section">
+  <h6 class="title container">Landing on its galaxy</h6>
+  <div class="galaxy" id="galaxy"></div>
+  <!-- Planets -->
+  <div class="planet" id="planet1" style="top: 15%; left: 10%; background-image: url('https://static.vecteezy.com/system/resources/previews/022/833/308/large_2x/watercolor-painting-about-earth-day-free-png.png')"></div>
+  <div class="planet" id="planet2" style="top: 30%; left: 70%; background-image: url('https://static.vecteezy.com/system/resources/previews/022/832/931/large_2x/watercolor-painting-about-earth-day-free-png.png')"></div>
+  <div class="planet" id="planet3" style="top: 65%; left: 20%; background-image: url('https://static.vecteezy.com/system/resources/previews/011/216/031/large_2x/watercolor-galaxy-painting-free-png.png')"></div>
+  <div class="planet" id="planet4" style="top: 70%; left: 65%; background-image: url('https://static.vecteezy.com/system/resources/previews/009/342/733/large_2x/planet-clipart-design-illustration-free-png.png')"></div>
+  <div class="planet" id="planet5" style="top: 45%; left: 40%; background-image: url('https://static.vecteezy.com/system/resources/previews/009/380/774/large_2x/planet-clipart-design-illustration-free-png.png')"></div>
+
+  <!-- Cat character -->
+  <div class="player" id="player" style="top: 80%; left: 10%;"></div>
+
+  <!-- Optional floating objects -->
+  <div class="floating-object" style="top: 10%; left: 30%; background-image: url('https://static.vecteezy.com/system/resources/previews/013/184/213/large_2x/space-watercolor-hand-painted-free-png.png')"></div>
+  <div class="floating-object" style="top: 50%; left: 80%; background-image: url('https://static.vecteezy.com/system/resources/previews/013/180/769/large_2x/space-watercolor-hand-painted-free-png.png')"></div>
+  <canvas id="star-canvas"></canvas>
 </section>
 
-<section class="journey-visual-section fullscreen">
+<section class="journey-visual-section fullscreen" id="journey-visual-section">
   <div class="object-container">
     <img src="assets/images/journey-0.svg" alt="" class="object object-0">
     <img src="assets/images/journey-1.png" alt="" class="object object-1">
@@ -161,7 +154,7 @@
 </div>
 
 <!-- Section 5: Floating Islands -->
-<section class="landing-section fullscreen">
+<section class="landing-section fullscreen" id="landing-section">
   <div class="container">
     <h6 class="title">Every moment in game is designed to captivate your<br/> senses and ignite your imagination.</h6>
   </div>
@@ -179,7 +172,7 @@
 </div>
 
 <!-- Section 6: Team Info -->
-<section class="team-section fullscreen">
+<section class="team-section fullscreen" id="team-section">
   <div class="team-container container">
     <h2>Meet the Team</h2>
     <p>We are a group which is   passionate about
@@ -206,7 +199,7 @@
 </section>
 
 <!-- Section 7: Call to Action -->
-<section class="cta-section fullscreen">
+<section class="cta-section fullscreen" id="cta-section">
   <div class="container">
     <div class="center-section">
 
@@ -222,6 +215,11 @@
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<!-- Howler.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
 <script src="assets/app.js"></script>
 </body>
 </html>
