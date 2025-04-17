@@ -132,33 +132,38 @@ section {
     background: url('../images/hero-bg.jpg') no-repeat center center / cover;
 }
 
+/* Stars Container */
 .stars-container {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0;
+    pointer-events: none;
+    z-index: 1;
 }
 
+/* Star Styles */
 .star {
     position: absolute;
-    background-color: #fff;
-    width: 2px;
-    height: 2px;
+    background-color: white;
     border-radius: 50%;
-    opacity: 0.7;
-    animation: twinkle 3s infinite alternate;
+    animation: twinkle linear infinite;
 }
 
+/* Twinkle Animation */
 @keyframes twinkle {
     0% {
         opacity: 0.2;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
         transform: scale(1);
     }
     100% {
-        opacity: 0.8;
-        transform: scale(1.5);
+        opacity: 0.2;
+        transform: scale(0.8);
     }
 }
 
@@ -262,7 +267,6 @@ section {
     background-size: cover;
     background-position: center;
     position: relative;
-    padding: 120px 40px;
     z-index: 1;
     overflow: hidden;
 }
@@ -422,6 +426,29 @@ section {
     position: relative;
     overflow: hidden;
 }
+
+.language-scroll:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.language-scroll.english:before {
+    background-image: url("../images/card-english.jpg");
+}
+.language-scroll.chinese:before {
+    background-image: url("../images/card-chinese.jpg");
+}
+.language-scroll.korean:before {
+    background-image: url("../images/card-korean.jpg");
+}
+.language-scroll.vietnamese:before {
+     background-image: url("../images/card-vietnamese.jpg");
+ }
+
 
 .language-scroll:hover {
     transform: translateY(-5px) scale(1.02);
@@ -900,93 +927,225 @@ section {
 .timeline-section {
     background-color: var(--color-bg-dark);
     position: relative;
+    padding: 80px 20px;
+    background-image: linear-gradient(135deg, #9796f0 10%, #fbc7d4 100%);
 }
 
-.timeline-path {
-    position: relative;
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px 0;
-}
-
-.timeline-path::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 4px;
-    height: 100%;
-    background-color: var(--color-secondary);
-    opacity: 0.5;
-}
-
-.timeline-point {
-    position: relative;
-    margin-bottom: 60px;
-    display: flex;
-    justify-content: flex-start;
+.gantt-chart {
     width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+    overflow-x: auto;
 }
 
-.timeline-point:nth-child(even) {
-    justify-content: flex-end;
+.gantt-title {
+    font-family: var(--font-pixel);
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 5px;
 }
 
-.timeline-point::before {
+.gantt-subtitle {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.gantt-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 10;
+    border-radius: 8px 8px 0 0;
+}
+
+.task-column {
+    width: 250px;
+    min-width: 250px;
+    padding: 10px;
+    border-right: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.quarters-container {
+    display: flex;
+    flex-grow: 1;
+    min-width: 700px;
+}
+
+.year-group {
+    display: flex;
+    flex-grow: 1;
+}
+
+.quarter {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    border-right: 1px dashed rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.year-group:last-child .quarter:last-child {
+    border-right: none;
+}
+
+.quarter-title {
+    font-family: var(--font-text);
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.quarter-months {
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.quarter-year {
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.gantt-content {
+    margin-top: 10px;
+}
+
+.tasks-container {
+    display: flex;
+    flex-direction: column;
+    /*gap: 10px;*/
+}
+
+.task-item {
+    display: flex;
+    min-height: 40px;
+    /*border-radius: 4px;*/
+    /*overflow: hidden;*/
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.task-name {
+    width: 250px;
+    min-width: 250px;
+    padding: 10px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-right: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.task-timeline {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(16, 1fr);
+    flex-grow: 1;
+    min-width: 700px;
+    position: relative;
+}
+
+.task-timeline:before {
     content: '';
     position: absolute;
-    top: 10px;
     left: 50%;
-    transform: translateX(-50%);
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: var(--color-bg-dark);
-    border: 4px solid var(--color-secondary);
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
-.timeline-point.active::before {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 10px var(--color-accent);
+.task-bar {
+    height: 1.25rem;
+    grid-row: 1;
+    border-radius: 1rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
 }
 
-.timeline-point.complete::before {
-    border-color: var(--color-primary);
-    background-color: var(--color-primary);
+.task-bar:hover {
+    opacity: 1;
+    transform: scale(1.02);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
-.point-content {
-    background-color: rgba(26, 26, 46, 0.7);
-    padding: 20px;
-    border-radius: 8px;
-    width: calc(50% - 40px);
-    border: 1px solid var(--color-secondary);
-    position: relative;
+/* Responsive styles for the timeline */
+@media screen and (max-width: 1024px) {
+    .gantt-chart {
+        padding: 15px;
+    }
+
+    .gantt-title {
+        font-size: 1.5rem;
+    }
+
+    .gantt-subtitle {
+        font-size: 1rem;
+    }
 }
 
-.point-date {
-    position: absolute;
-    top: -25px;
-    font-family: var(--font-pixel);
-    color: var(--color-primary);
-    font-size: 0.8rem;
+@media screen and (max-width: 768px) {
+    .timeline-section {
+        padding: 60px 10px;
+    }
+
+    .gantt-chart {
+        padding: 10px;
+    }
+
+    .task-column {
+        width: 180px;
+        min-width: 180px;
+    }
+
+    .task-item {
+        background-color: transparent;
+    }
+
+
+    .task-name {
+        width: 180px;
+        min-width: 180px;
+        font-size: 0.8rem;
+    }
+
+    .quarter-title {
+        font-size: 0.8rem;
+    }
+
+    .quarter-months,
+    .quarter-year {
+        font-size: 0.7rem;
+    }
 }
 
-.timeline-point:nth-child(odd) .point-date {
-    right: 0;
+@media screen and (max-width: 480px) {
+    .timeline-section {
+        padding: 40px 5px;
+    }
+
+    .gantt-chart {
+        border-radius: 8px;
+        padding: 8px;
+    }
+
+    .gantt-title {
+        font-size: 1.2rem;
+    }
+
+    .gantt-subtitle {
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
 }
 
-.timeline-point:nth-child(even) .point-date {
-    left: 0;
-}
-
-.point-content h3 {
-    font-size: 1.2rem;
-    color: var(--color-primary);
-    margin-bottom: 10px;
-}
 
 /* Team Section */
 .team-section {
@@ -1242,6 +1401,7 @@ section {
     background: linear-gradient(to bottom, rgba(10, 10, 26, 0), #1a1a2e);
     bottom: 0;
     position: absolute;
+    z-index: 10;
 }
 .section-gradient-top {
     width: 100%;
@@ -1249,4 +1409,5 @@ section {
     background: linear-gradient(to top, rgba(10, 10, 26, 0), #1a1a2e);
     top: 0;
     position: absolute;
+    z-index: 10;
 }
