@@ -1,225 +1,418 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Conquering the Planetary Galaxy</title>
-  <link rel="shortcut icon" type="image/x-icon" href="old/assets/images/icon.png" />
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-grid.min.css">
-  <link rel="stylesheet" href="assets/css/bootstrap/bootstrap-utilities.min.css">
-
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/style.css">
 </head>
-<body id="body">
-<!-- Section 1: Header with Planets -->
-<section class="hero-section fullscreen" id="hero-section">
-  <div class="object-container">
-    <!-- Placeholder cho các hành tinh -->
-<!--    <img src="placeholder-planet1.png" alt="Planet 1" class="planet planet1">-->
-<!--    <img src="placeholder-planet2.png" alt="Planet 2" class="planet planet2">-->
-<!--    <img src="placeholder-planet3.png" alt="Planet 3" class="planet planet3">-->
-<!--    <img src="placeholder-planet4.png" alt="Planet 4" class="planet planet4">-->
+<body>
+<!-- Navigation -->
+<nav class="cosmic-nav">
+  <div class="nav-logo">CosmoLinq</div>
+  <ul class="nav-links">
+    <li><a href="#intro">Introduction</a></li>
+    <li><a href="#story">Story</a></li>
+    <li><a href="#planets">Planets</a></li>
+    <li><a href="#playable">Experience</a></li>
+    <li><a href="#timeline">Roadmap</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#subscribe">Follow</a></li>
+  </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+  <div class="stars-container" id="stars-container"></div>
+  <div class="hero-content">
+    <div class="hero-image-container">
+      <img src="src/images/hero-image.png" alt="Cosmic Cat" class="hero-image">
+    </div>
+    <h1 class="hero-title">Conquering the Planetary Galaxy</h1>
+    <p class="hero-subtitle">Language Learning Journey Across the Universe</p>
+    <a href="#intro" class="start-button">Start Your Adventure</a>
   </div>
 
-  <h6 class="title center-section text-outline container-fluid text-center">Each language unlocks a new soul - a gateway to unseen worlds</h6>
-  <button type="button" class="btn">Enter</button>
+  <div class="section-gradient-bottom"></div>
 </section>
 
-<!-- Section 2: Introduction -->
-<section class="intro-section fullscreen" id="intro-section">
-  <div class="object-container">
-    <img src="assets/images/intro-object-1.png" alt="" class="object object-1">
-    <img src="assets/images/intro-object-2.png" alt="" class="object object-2">
-    <img src="assets/images/intro-object-3.png" alt="" class="object object-3">
-    <img src="assets/images/intro-object-4.png" alt="" class="object object-4">
-  </div>
+<!-- Intro Section -->
+<section id="intro" class="intro-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Introducing the Adventure</h2>
 
-  <div class="intro-content center-section container container-fluid">
-    <h6 class="title">Ready to embark on the first journey of the Cosmo?</h6>
-    <p>Embark on an intergalactic adventure in this fantasy language-learning game! 🚀
-      As a starship pilot, you'll navigate mystical galaxies, each representing a different
-      language. Choose your Cosmo, follow the cosmic roadmap, and conquer grammar
-      challenges to forge brilliant stars. Master the universe, one word at a time! ✨</p>
-  </div>
-</section>
+  <div class="intro-particles" id="intro-particles"></div>
 
-<div class="flying">
-  <img src="assets/images/satellite.png" alt="" class="satellite anim-float">
-</div>
-
-<!-- Section 3: Language Selection -->
-<section class="language-section fullscreen" id="language-section">
-  <h6 class="title container-fluid">Experience a brand-new story-driven adventure with visually stunning cinematics and intriguing encounters.</h6>
-  <div class="planet-chain-container">
-    <img src="assets/images/planet-chain.png" alt="" class="planet-chain"/>
-  </div>
-  <div class="language-cards container d-none d-md-flex">
-    <div class="card">
-      <p>Chinese</p>
-      <img src="assets/images/chinese-card.jpg" alt="Chinese">
+  <div class="intro-content">
+    <div class="intro-text">
+      <p>Conquering the Planetary Galaxy is an engaging educational game that helps players learn different languages through the exciting journey of a cosmic cat. Players will explore various planets, each representing a unique language and culture.</p>
     </div>
-    <div class="card">
-      <p>Vietnamese</p>
-      <img src="assets/images/vietnamese-card.jpg" alt="Vietnamese">
-    </div>
-    <div class="card">
-      <p>English</p>
-      <img src="assets/images/english-card.jpg" alt="English">
-    </div>
-    <div class="card">
-      <p>Korean</p>
-      <img src="assets/images/korean-card.jpg" alt="Korean">
-    </div>
-  </div>
-
-  <div class="d-md-none container-fluid">
-    <!-- Slider main container -->
-    <div class="swiper">
-      <!-- Additional required wrapper -->
-      <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">
-          <p class="mb-2">Chinese</p>
-          <img src="assets/images/chinese-card.jpg" alt="Chinese" class="img-fluid rounded-4">
-        </div>
-        <div class="swiper-slide">
-          <p class="mb-2">Vietnamese</p>
-          <img src="assets/images/vietnamese-card.jpg" alt="Vietnamese" class="img-fluid rounded-4">
-        </div>
-        <div class="swiper-slide">
-          <p class="mb-2">English</p>
-          <img src="assets/images/english-card.jpg" alt="English" class="img-fluid rounded-4">
-        </div>
-        <div class="swiper-slide">
-          <p class="mb-2">Korean</p>
-          <img src="assets/images/korean-card.jpg" alt="Korean" class="img-fluid rounded-4">
-        </div>
+    <div class="intro-features">
+      <div class="feature feature-play">
+        <div class="feature-icon">🕹️</div>
+        <h3>Learn by Playing</h3>
+        <p>Complete fun quests, explore new worlds, and level up your language skills while adventuring.</p>
       </div>
-
-      <!-- If we need navigation buttons -->
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-button-next"></div>
-
-      <!-- If we need scrollbar -->
-      <div class="swiper-scrollbar"></div>
-    </div>
-  </div>
-</section>
-
-<!-- Section 4: Journey Progress -->
-
-<section class="journey-section fullscreen" id="journey-section">
-  <h6 class="title container">Landing on its galaxy</h6>
-  <div class="galaxy" id="galaxy"></div>
-  <!-- Planets -->
-  <div class="planet" id="planet1" style="top: 15%; left: 10%; background-image: url('https://static.vecteezy.com/system/resources/previews/022/833/308/large_2x/watercolor-painting-about-earth-day-free-png.png')"></div>
-  <div class="planet" id="planet2" style="top: 30%; left: 70%; background-image: url('https://static.vecteezy.com/system/resources/previews/022/832/931/large_2x/watercolor-painting-about-earth-day-free-png.png')"></div>
-  <div class="planet" id="planet3" style="top: 65%; left: 20%; background-image: url('https://static.vecteezy.com/system/resources/previews/011/216/031/large_2x/watercolor-galaxy-painting-free-png.png')"></div>
-  <div class="planet" id="planet4" style="top: 70%; left: 65%; background-image: url('https://static.vecteezy.com/system/resources/previews/009/342/733/large_2x/planet-clipart-design-illustration-free-png.png')"></div>
-  <div class="planet" id="planet5" style="top: 45%; left: 40%; background-image: url('https://static.vecteezy.com/system/resources/previews/009/380/774/large_2x/planet-clipart-design-illustration-free-png.png')"></div>
-
-  <!-- Cat character -->
-  <div class="player" id="player" style="top: 80%; left: 10%;"></div>
-
-  <!-- Optional floating objects -->
-  <div class="floating-object" style="top: 10%; left: 30%; background-image: url('https://static.vecteezy.com/system/resources/previews/013/184/213/large_2x/space-watercolor-hand-painted-free-png.png')"></div>
-  <div class="floating-object" style="top: 50%; left: 80%; background-image: url('https://static.vecteezy.com/system/resources/previews/013/180/769/large_2x/space-watercolor-hand-painted-free-png.png')"></div>
-  <canvas id="star-canvas"></canvas>
-</section>
-
-<section class="journey-visual-section fullscreen" id="journey-visual-section">
-  <div class="object-container">
-    <img src="assets/images/journey-0.svg" alt="" class="object object-0">
-    <img src="assets/images/journey-1.png" alt="" class="object object-1">
-    <img src="assets/images/journey-2.png" alt="" class="object object-2">
-    <img src="assets/images/journey-3.png" alt="" class="object object-3">
-    <img src="assets/images/journey-4.png" alt="" class="object object-4">
-    <img src="assets/images/journey-5.png" alt="" class="object object-5">
-    <img src="assets/images/journey-6.png" alt="" class="object object-6">
-    <img src="assets/images/journey-7.png" alt="" class="object object-7">
-    <img src="assets/images/journey-8.png" alt="" class="object object-8">
-    <img src="assets/images/journey-9.png" alt="" class="object object-9">
-    <img src="assets/images/journey-10.png" alt="" class="object object-10">
-  </div>
-
-  <p class="title">Complete this extraordinary audio-visual journey!</p>
-</section>
-
-<div class="flying">
-  <img src="assets/images/galaxy-path-1.png" alt="" class="galaxy-path-1">
-  <img src="assets/images/galaxy-path-2.png" alt="" class="galaxy-path-2">
-  <img src="assets/images/galaxy-path-3.png" alt="" class="galaxy-path-3">
-</div>
-
-<!-- Section 5: Floating Islands -->
-<section class="landing-section fullscreen" id="landing-section">
-  <div class="container">
-    <h6 class="title">Every moment in game is designed to captivate your<br/> senses and ignite your imagination.</h6>
-  </div>
-</section>
-<div class="flying flying-landing-section">
-  <div class="object-container">
-    <img src="assets/images/land-1.png" alt="" class="object object-1">
-    <img src="assets/images/land-2.png" alt="" class="object object-2">
-    <img src="assets/images/land-3.png" alt="" class="object object-3">
-    <img src="assets/images/cloud-1.png" alt="" class="object object-4">
-    <img src="assets/images/cloud-2.png" alt="" class="object object-5 anim-float">
-    <img src="assets/images/cloud-2.png" alt="" class="object object-6">
-    <img src="assets/images/cloud-2.png" alt="" class="object object-7">
-  </div>
-</div>
-
-<!-- Section 6: Team Info -->
-<section class="team-section fullscreen" id="team-section">
-  <div class="team-container container">
-    <h2>Meet the Team</h2>
-    <p>We are a group which is   passionate about
-      languages, games, and technology, with a mission to
-      help you learn languages in the most enjoyable way !</p>
-    <div class="team-members">
-      <div class="member">
-        <img src="assets/images/member-3.png" alt="Nha Phuong" class="member-img">
-        <h3>雅芳</h3>
-        <div class="member-position">English Language</div>
+      <div class="feature feature-multilingual">
+        <div class="feature-icon">🈚</div>
+        <h3>Multilingual</h3>
+        <p>Learn English, Chinese, Korean, and Vietnamese – each with accurate pronunciation and engaging content.</p>
       </div>
-      <div class="member">
-        <img src="assets/images/member-2.png" alt="Hoa" class="member-img">
-        <h3>풍화</h3>
-        <div class="member-position">Business & Big data AI</div>
+      <div class="feature feature-culture">
+        <div class="feature-icon">📜</div>
+        <h3>Explore Cultures</h3>
+        <p>Discover ancient stories, festivals, and idioms from each planet – inspired by real-world cultures.</p>
       </div>
-      <div class="member">
-        <img src="assets/images/member-1.png" alt="Tercio" class="member-img">
-        <h3>Tercio</h3>
-        <div class="member-position">Software Engineer</div>
+      <div class="feature feature-ai">
+        <div class="feature-icon">🤖</div>
+        <h3>AI Support</h3>
+        <p>Get personalized feedback using AI-powered pronunciation evaluation and adaptive learning tools.</p>
       </div>
     </div>
   </div>
+  <div class="section-gradient-bottom"></div>
 </section>
 
-<!-- Section 7: Call to Action -->
-<section class="cta-section fullscreen" id="cta-section">
-  <div class="container">
-    <div class="center-section">
-
-      <h2>Ready to Explore the Universe of Language?</h2>
-      <button class="btn">Sign Up for Beta</button>
+<!-- Story/Language Section -->
+<section id="story" class="story-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Language Story</h2>
+  <div class="language-scrolls">
+    <div class="language-scroll english">
+      <div class="scroll-icon"></div>
+      <h3>English</h3>
+      <p>Azure Planet - where everyone communicates in English and experiences Anglo-American culture. Rich vocabulary and diverse grammar help learners access the global language.</p>
+    </div>
+    <div class="language-scroll chinese">
+      <div class="scroll-icon"></div>
+      <h3>Chinese</h3>
+      <p>Amber Planet - where ancient and modern Chinese characters blend. Learn about Chinese writing, pronunciation, and popular cultural expressions.</p>
+    </div>
+    <div class="language-scroll korean">
+      <div class="scroll-icon"></div>
+      <h3>Korean</h3>
+      <p>Magenta Planet - land of Hangul. Discover Korean language with its unique writing system, pronunciation, and popular cultural elements.</p>
+    </div>
+    <div class="language-scroll vietnamese">
+      <div class="scroll-icon"></div>
+      <h3>Vietnamese</h3>
+      <p>Jade Planet - preserving the sound of Vietnamese. Learn about tone marks, intonation, and unique Vietnamese idioms and proverbs.</p>
     </div>
   </div>
+  <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Planets Section -->
+<section id="planets" class="planets-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Explore the Planets</h2>
+  <div class="space-background">
+    <div class="character">
+      <div class="character-trail"></div>
+    </div>
+
+    <div class="planet planet-english" data-language="english" style="top: 10%; left: 20%;">
+      <div class="planet-info">
+        <h3>Azure</h3>
+        <p>English Planet</p>
+      </div>
+    </div>
+    <div class="planet planet-chinese" data-language="chinese" style="top: 60%; left: 15%;">
+      <div class="planet-info">
+        <h3>Amber</h3>
+        <p>Chinese Planet</p>
+      </div>
+    </div>
+    <div class="planet planet-korean" data-language="korean" style="top: 30%; left: 75%;">
+      <div class="planet-info">
+        <h3>Magenta</h3>
+        <p>Korean Planet</p>
+      </div>
+    </div>
+    <div class="planet planet-vietnamese" data-language="vietnamese" style="top: 70%; left: 70%;">
+      <div class="planet-info">
+        <h3>Jade</h3>
+        <p>Vietnamese Planet</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="planet-instruction">Click on a planet to start your language adventure</p>
+  <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Playable Section -->
+<section id="playable" class="playable-section fullscreen-scene">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Game Experience</h2>
+  <div class="game-scene">
+    <div class="scene-background">
+      <div class="character"></div>
+
+      <!-- Interactive Objects -->
+      <div class="interactive-object tree" data-word="Tree">
+        <img src="src/images/playable-tree.png" alt=""/>
+
+        <div class="object-popup">
+          <div class="word">Tree</div>
+          <div class="pronunciation">tree</div>
+          <button class="sound-button">🔊</button>
+        </div>
+      </div>
+
+      <div class="interactive-object bush" data-word="Bush">
+        <img src="src/images/playable-bush.png" alt=""/>
+
+        <div class="object-popup">
+          <div class="word">Bush</div>
+          <div class="pronunciation">bush</div>
+          <button class="sound-button">🔊</button>
+        </div>
+      </div>
+
+      <div class="interactive-object pond" data-word="Pond">
+        <img src="" alt="Pond"/>
+
+        <div class="object-popup">
+          <div class="word">Pond</div>
+          <div class="pronunciation">pond</div>
+          <button class="sound-button">🔊</button>
+        </div>
+      </div>
+
+      <div class="interactive-object cloud" data-word="Cloud">
+        <img src="src/images/playable-cloud.png" alt=""/>
+
+        <div class="object-popup">
+          <div class="word">Cloud</div>
+          <div class="pronunciation">cloud</div>
+          <button class="sound-button">🔊</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="game-instructions-wrapper">
+    <button class="toggle-instructions">ℹ️ How to Play</button>
+    <div class="game-instructions collapsed">
+      <p>Hover over objects to see vocabulary and pronunciation. Click to hear the pronunciation.</p>
+      <div class="ai-feature">
+        <h3>AI Feature</h3>
+        <p>Cosmic Cat Adventures uses AI to evaluate pronunciation and adjust difficulty to suit the learner.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" class="timeline-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Development Roadmap</h2>
+
+  <p class="gantt-subtitle">For 1<sup>st</sup> phase</p>
+  <div class="gantt-chart">
+    <!--        <h3 class="gantt-title">Gantt chart</h3>-->
+    <!--        <p class="gantt-subtitle">For 1<sup>st</sup> phase</p>-->
+
+    <!-- Quarters Header -->
+    <div class="gantt-header">
+      <div class="task-column"></div>
+      <div class="quarters-container">
+        <!-- 2025 -->
+        <div class="year-group">
+          <div class="quarter">
+            <div class="quarter-title">First Quarter</div>
+            <div class="quarter-months">(January - March)</div>
+            <div class="quarter-year">2025</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Second Quarter</div>
+            <div class="quarter-months">(April - June)</div>
+            <div class="quarter-year">2025</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Third Quarter</div>
+            <div class="quarter-months">(July - September)</div>
+            <div class="quarter-year">2025</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Fourth Quarter</div>
+            <div class="quarter-months">(October - December)</div>
+            <div class="quarter-year">2025</div>
+          </div>
+        </div>
+
+        <!-- 2026 -->
+        <div class="year-group">
+          <div class="quarter">
+            <div class="quarter-title">First Quarter</div>
+            <div class="quarter-months">(January - March)</div>
+            <div class="quarter-year">2026</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Second Quarter</div>
+            <div class="quarter-months">(April - June)</div>
+            <div class="quarter-year">2026</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Third Quarter</div>
+            <div class="quarter-months">(July - September)</div>
+            <div class="quarter-year">2026</div>
+          </div>
+          <div class="quarter">
+            <div class="quarter-title">Fourth Quarter</div>
+            <div class="quarter-months">(October - December)</div>
+            <div class="quarter-year">2026</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gantt Chart Content -->
+    <div class="gantt-content">
+      <div class="tasks-container">
+        <div class="task-item">
+          <div class="task-name">Official release & content update</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 15/16; background-color: #000000;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Launch planning & fundraising</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 14/16; background-color: #8B4513;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Optimize performance & gameplay</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 13/16; background-color: #4B0082;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Open beta test & gather feedback</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 12/14; background-color: #8B0000;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Internal test & bug fixing</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 11/13; background-color: #BA55D3;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">UI/UX integration & interaction testing</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 10/12; background-color: #bb94d0;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Build task map & learning systems</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 9/11; background-color: #E6E6FA;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Initial prototype coding</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 6/10; background-color: #CD853F;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Design galaxy map & constellations</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 5/8; background-color: #9370DB;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Design characters and assets</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 3/6; background-color: #BDB76B;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Build Game Design Document (GDD)</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 2/3; background-color: #FFD700;"></div>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-name">Finalize storyline, gameplay<br>& initial UI/UX concept</div>
+          <div class="task-timeline">
+            <div class="task-bar" style="grid-column: 1/2; background-color: #FFC0CB;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Development Team</h2>
+  <div class="team-members">
+    <div class="team-member">
+      <div class="member-avatar"></div>
+      <h3>Nha Phuong</h3>
+      <div class="member-role">Game Designer</div>
+      <p>User experience expert and learning content developer</p>
+    </div>
+
+    <div class="team-member">
+      <div class="member-avatar"></div>
+      <h3>Tercio</h3>
+      <div class="member-role">Lead Developer</div>
+      <p>Software engineer with experience in educational game development and AI integration</p>
+    </div>
+
+    <div class="team-member">
+      <div class="member-avatar"></div>
+      <h3>Phuong Hoa</h3>
+      <div class="member-role">Language Expert</div>
+      <p>Multilingual linguist specializing in effective teaching methods</p>
+    </div>
+  </div>
+  <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Subscribe Section -->
+<section id="subscribe" class="subscribe-section">
+  <div class="section-gradient-top"></div>
+  <h2 class="section-title">Subscribe for Updates</h2>
+  <p class="subscribe-text">Leave your email to receive updates about development progress and game launch notifications!</p>
+
+  <form class="subscribe-form">
+    <input type="email" placeholder="Your Email" required>
+    <button type="submit" class="subscribe-button">Subscribe</button>
+  </form>
+
+  <p class="subscribe-note">We will never share your personal information with third parties.</p>
+  <div class="section-gradient-bottom"></div>
 </section>
 
 <!-- Footer -->
-<footer>
-  <p>&copy; 2025 Designed by Dreamers.</p>
+<footer class="cosmic-footer">
+  <div class="footer-logo">Conquering the Planetary Galaxy</div>
+  <div class="footer-links">
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms of Use</a>
+    <a href="#">Contact</a>
+    <a href="#">About Us</a>
+  </div>
+  <div class="footer-copyright">© 2025 Conquering the Planetary Galaxy. All rights reserved.</div>
 </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<!-- Howler.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
-<!-- GSAP -->
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.js"></script>
-<script src="assets/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="src/js/stars.js"></script>
+<script src="src/js/app.js"></script>
 </body>
 </html>
