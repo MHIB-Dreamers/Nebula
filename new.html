@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conquering the Planetary Galaxy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="cosmic-nav">
+    <div class="nav-logo">CosmoLinq</div>
+    <ul class="nav-links">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#story">Story</a></li>
+        <li><a href="#planets">Planets</a></li>
+        <li><a href="#playable">Experience</a></li>
+        <li><a href="#timeline">Roadmap</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#subscribe">Follow</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero-section">
+    <div class="stars-container" id="stars-container"></div>
+    <div class="hero-content">
+        <div class="hero-image-container">
+            <img src="src/images/hero-image.png" alt="Cosmic Cat" class="hero-image">
+        </div>
+        <h1 class="hero-title">Conquering the Planetary Galaxy</h1>
+        <p class="hero-subtitle">Language Learning Journey Across the Universe</p>
+        <a href="#intro" class="start-button">Start Your Adventure</a>
+    </div>
+
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Intro Section -->
+<section id="intro" class="intro-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Introducing the Adventure</h2>
+
+    <div class="intro-particles" id="intro-particles"></div>
+
+    <div class="intro-content">
+        <div class="intro-text">
+            <p>Conquering the Planetary Galaxy is an engaging educational game that helps players learn different languages through the exciting journey of a cosmic cat. Players will explore various planets, each representing a unique language and culture.</p>
+        </div>
+        <div class="intro-features">
+            <div class="feature feature-play">
+                <div class="feature-icon">🕹️</div>
+                <h3>Learn by Playing</h3>
+                <p>Complete fun quests, explore new worlds, and level up your language skills while adventuring.</p>
+            </div>
+            <div class="feature feature-multilingual">
+                <div class="feature-icon">🈚</div>
+                <h3>Multilingual</h3>
+                <p>Learn English, Chinese, Korean, and Vietnamese – each with accurate pronunciation and engaging content.</p>
+            </div>
+            <div class="feature feature-culture">
+                <div class="feature-icon">📜</div>
+                <h3>Explore Cultures</h3>
+                <p>Discover ancient stories, festivals, and idioms from each planet – inspired by real-world cultures.</p>
+            </div>
+            <div class="feature feature-ai">
+                <div class="feature-icon">🤖</div>
+                <h3>AI Support</h3>
+                <p>Get personalized feedback using AI-powered pronunciation evaluation and adaptive learning tools.</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Story/Language Section -->
+<section id="story" class="story-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Language Story</h2>
+    <div class="language-scrolls">
+        <div class="language-scroll">
+            <div class="scroll-icon"></div>
+            <h3>English</h3>
+            <p>Azure Planet - where everyone communicates in English and experiences Anglo-American culture. Rich vocabulary and diverse grammar help learners access the global language.</p>
+        </div>
+        <div class="language-scroll">
+            <div class="scroll-icon"></div>
+            <h3>Chinese</h3>
+            <p>Amber Planet - where ancient and modern Chinese characters blend. Learn about Chinese writing, pronunciation, and popular cultural expressions.</p>
+        </div>
+        <div class="language-scroll">
+            <div class="scroll-icon"></div>
+            <h3>Korean</h3>
+            <p>Magenta Planet - land of Hangul. Discover Korean language with its unique writing system, pronunciation, and popular cultural elements.</p>
+        </div>
+        <div class="language-scroll">
+            <div class="scroll-icon"></div>
+            <h3>Vietnamese</h3>
+            <p>Jade Planet - preserving the sound of Vietnamese. Learn about tone marks, intonation, and unique Vietnamese idioms and proverbs.</p>
+        </div>
+    </div>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Planets Section -->
+<section id="planets" class="planets-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Explore the Planets</h2>
+    <div class="space-background">
+        <div class="character">
+            <div class="character-trail"></div>
+        </div>
+
+        <div class="planet planet-english" data-language="english" style="top: 10%; left: 20%;">
+            <div class="planet-info">
+                <h3>Azure</h3>
+                <p>English Planet</p>
+            </div>
+        </div>
+        <div class="planet planet-chinese" data-language="chinese" style="top: 60%; left: 15%;">
+            <div class="planet-info">
+                <h3>Amber</h3>
+                <p>Chinese Planet</p>
+            </div>
+        </div>
+        <div class="planet planet-korean" data-language="korean" style="top: 30%; left: 75%;">
+            <div class="planet-info">
+                <h3>Magenta</h3>
+                <p>Korean Planet</p>
+            </div>
+        </div>
+        <div class="planet planet-vietnamese" data-language="vietnamese" style="top: 70%; left: 70%;">
+            <div class="planet-info">
+                <h3>Jade</h3>
+                <p>Vietnamese Planet</p>
+            </div>
+        </div>
+    </div>
+
+    <p class="planet-instruction">Click on a planet to start your language adventure</p>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Playable Section -->
+<section id="playable" class="playable-section fullscreen-scene">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Game Experience</h2>
+    <div class="game-scene">
+        <div class="scene-background">
+            <div class="character"></div>
+
+            <!-- Interactive Objects -->
+            <div class="interactive-object tree" data-word="Tree">
+                <img src="src/images/playable-tree.png" alt=""/>
+
+                <div class="object-popup">
+                    <div class="word">Tree</div>
+                    <div class="pronunciation">tree</div>
+                    <button class="sound-button">🔊</button>
+                </div>
+            </div>
+
+            <div class="interactive-object bush" data-word="Bush">
+                <img src="src/images/playable-bush.png" alt=""/>
+
+                <div class="object-popup">
+                    <div class="word">Bush</div>
+                    <div class="pronunciation">bush</div>
+                    <button class="sound-button">🔊</button>
+                </div>
+            </div>
+
+            <div class="interactive-object pond" data-word="Pond">
+                <img src="" alt="Pond"/>
+
+                <div class="object-popup">
+                    <div class="word">Pond</div>
+                    <div class="pronunciation">pond</div>
+                    <button class="sound-button">🔊</button>
+                </div>
+            </div>
+
+            <div class="interactive-object cloud" data-word="Cloud">
+                <img src="src/images/playable-cloud.png" alt=""/>
+
+                <div class="object-popup">
+                    <div class="word">Cloud</div>
+                    <div class="pronunciation">cloud</div>
+                    <button class="sound-button">🔊</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-instructions-wrapper">
+        <button class="toggle-instructions">ℹ️ How to Play</button>
+        <div class="game-instructions collapsed">
+            <p>Hover over objects to see vocabulary and pronunciation. Click to hear the pronunciation.</p>
+            <div class="ai-feature">
+                <h3>AI Feature</h3>
+                <p>Cosmic Cat Adventures uses AI to evaluate pronunciation and adjust difficulty to suit the learner.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Timeline Section -->
+<section id="timeline" class="timeline-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Development Roadmap</h2>
+    <div class="timeline-path">
+        <div class="timeline-point complete">
+            <div class="point-content">
+                <div class="point-date">January/2025</div>
+                <h3>Project Launch</h3>
+                <p>Developing the concept, character design, and project planning</p>
+            </div>
+        </div>
+
+        <div class="timeline-point complete">
+            <div class="point-content">
+                <div class="point-date">February/2025</div>
+                <h3>Prototype Development</h3>
+                <p>Building basic learning mechanics and designing the first planet</p>
+            </div>
+        </div>
+
+        <div class="timeline-point active">
+            <div class="point-content">
+                <div class="point-date">April/2025</div>
+                <h3>AI Integration</h3>
+                <p>Developing AI system for learning support and pronunciation assessment</p>
+            </div>
+        </div>
+
+        <div class="timeline-point">
+            <div class="point-content">
+                <div class="point-date">July/2025</div>
+                <h3>Beta Release</h3>
+                <p>Open testing with real users and collecting feedback</p>
+            </div>
+        </div>
+
+        <div class="timeline-point">
+            <div class="point-content">
+                <div class="point-date">October/2025</div>
+                <h3>Official Launch</h3>
+                <p>Game release on platforms with full content from 4 language planets</p>
+            </div>
+        </div>
+    </div>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="team-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Development Team</h2>
+    <div class="team-members">
+        <div class="team-member">
+            <div class="member-avatar"></div>
+            <h3>Nha Phuong</h3>
+            <div class="member-role">Game Designer</div>
+            <p>User experience expert and learning content developer</p>
+        </div>
+
+        <div class="team-member">
+            <div class="member-avatar"></div>
+            <h3>Tercio</h3>
+            <div class="member-role">Lead Developer</div>
+            <p>Software engineer with experience in educational game development and AI integration</p>
+        </div>
+
+        <div class="team-member">
+            <div class="member-avatar"></div>
+            <h3>Phuong Hoa</h3>
+            <div class="member-role">Language Expert</div>
+            <p>Multilingual linguist specializing in effective teaching methods</p>
+        </div>
+    </div>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Subscribe Section -->
+<section id="subscribe" class="subscribe-section">
+    <div class="section-gradient-top"></div>
+    <h2 class="section-title">Subscribe for Updates</h2>
+    <p class="subscribe-text">Leave your email to receive updates about development progress and game launch notifications!</p>
+
+    <form class="subscribe-form">
+        <input type="email" placeholder="Your Email" required>
+        <button type="submit" class="subscribe-button">Subscribe</button>
+    </form>
+
+    <p class="subscribe-note">We will never share your personal information with third parties.</p>
+    <div class="section-gradient-bottom"></div>
+</section>
+
+<!-- Footer -->
+<footer class="cosmic-footer">
+    <div class="footer-logo">Conquering the Planetary Galaxy</div>
+    <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Contact</a>
+        <a href="#">About Us</a>
+    </div>
+    <div class="footer-copyright">© 2025 Conquering the Planetary Galaxy. All rights reserved.</div>
+</footer>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+<script src="src/js/app.js"></script>
+</body>
+</html>
