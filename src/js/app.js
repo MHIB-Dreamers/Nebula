@@ -25,7 +25,7 @@ function setupNavigation() {
     // Thay đổi style của navigation khi scroll
     const nav = document.querySelector('.cosmic-nav');
 
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
         if (window.scrollY > 50) {
             nav.classList.add('nav-scrolled');
         } else {
@@ -37,7 +37,7 @@ function setupNavigation() {
     const navLinks = document.querySelectorAll('.nav-links a, .start-button');
 
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
 
             const targetId = this.getAttribute('href');
@@ -55,10 +55,10 @@ function setupNavigation() {
 function setupPronunciation() {
     // Audio file cho phát âm
     const audioFiles = {
-        'Tree': 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/tree--_gb_1.mp3',
-        'Bush': 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/bush--_gb_1.mp3',
-        'Pond': 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/pond--_gb_1.mp3',
-        'Cloud': 'https://ssl.gstatic.com/dictionary/static/sounds/20200429/cloud--_gb_1.mp3'
+        'Tree': 'https://api.dictionaryapi.dev/media/pronunciations/en/tree-us.mp3',
+        'Bush': 'https://api.dictionaryapi.dev/media/pronunciations/en/rock-us.mp3',
+        'Pond': 'https://api.dictionaryapi.dev/media/pronunciations/en/pond-us.mp3',
+        'Cloud': 'https://api.dictionaryapi.dev/media/pronunciations/en/cloud-us.mp3'
     };
 
     // Đối tượng audio để phát âm
@@ -68,7 +68,7 @@ function setupPronunciation() {
     const soundButtons = document.querySelectorAll('.sound-button');
 
     soundButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
+        button.addEventListener('click', function (e) {
             e.stopPropagation();
 
             const word = this.closest('.object-popup').querySelector('.word').textContent;
@@ -81,19 +81,19 @@ function setupPronunciation() {
 
     interactiveObjects.forEach(object => {
         // Hiển thị popup khi di chuột qua đối tượng
-        object.addEventListener('mouseenter', function() {
+        object.addEventListener('mouseenter', function () {
             const popup = this.querySelector('.object-popup');
             popup.style.transform = 'translateX(-50%) scale(1)';
         });
 
         // Ẩn popup khi di chuột ra khỏi đối tượng
-        object.addEventListener('mouseleave', function() {
+        object.addEventListener('mouseleave', function () {
             const popup = this.querySelector('.object-popup');
             popup.style.transform = 'translateX(-50%) scale(0)';
         });
 
         // Phát âm khi click vào đối tượng
-        object.addEventListener('click', function() {
+        object.addEventListener('click', function () {
             const word = this.getAttribute('data-word');
             playPronunciation(word);
         });
@@ -111,15 +111,44 @@ function setupPronunciation() {
 // Rest of the script remains the same, but I'll update the subscribe form alert
 const subscribeForm = document.querySelector('.subscribe-form');
 if (subscribeForm) {
-    subscribeForm.addEventListener('submit', function(e) {
+    subscribeForm.addEventListener('submit', function (e) {
         e.preventDefault();
 
         const emailInput = this.querySelector('input[type="email"]');
+        const submitButton = this.querySelector('.subscribe-button');
+        const loadingText = this.querySelector('.loading-text');
         const email = emailInput.value;
 
         if (email) {
-            alert(`Thank you for subscribing! We will send updates to ${email}.`);
-            emailInput.value = '';
+            // Show loading + disable inputs
+            loadingText.style.display = 'block';
+            emailInput.disabled = true;
+            submitButton.disabled = true;
+            submitButton.textContent = 'Submitting...';
+            
+            // URL Web App của Google Script bạn đã deploy
+            const scriptURL = 'https://script.google.com/macros/s/AKfycby23AfBz6JkWimM5AGVxOojsUiuSHEZRvg0wPLYvX2ScxASL14qO--WmXWAGz1SDPy0sg/exec';
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: new URLSearchParams({ email })
+            })
+                .then(() => {
+                    alert(`🎉 Thank you for subscribing! We will send updates to ${email}.`);
+                    emailInput.value = '';
+                })
+                .catch(err => {
+                    console.error('Error!', err.message);
+                    alert('Oops! Something went wrong. Please try again.');
+                }).finally(() => {
+                    // Hide loading + enable inputs
+                    loadingText.style.display = 'none';
+                    emailInput.disabled = false;
+                    submitButton.disabled = false;
+                    submitButton.textContent = 'Subscribe';
+                });
         }
     });
 }
@@ -226,28 +255,34 @@ function planetSection() {
     // Hàm tùy chỉnh giao diện section playable dựa vào hành tinh
     function customizePlayableScene(language) {
         const gameScene = document.querySelector('.scene-background');
+        gameScene.setAttribute('data-language', language);
+
+        const tree = gameScene.querySelector('.tree img');
+        const bush = gameScene.querySelector('.bush img');
+        const pond = gameScene.querySelector('.pond img');
+        const cloud = gameScene.querySelector('.cloud img');
 
         // Đổi background và hiệu ứng dựa vào ngôn ngữ
-        switch(language) {
+        switch (language) {
             case 'english':
-                gameScene.style.backgroundImage = 'url("https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
-                gameScene.style.filter = 'hue-rotate(0deg)';
+                gameScene.style.backgroundImage = 'url("src/images/playable-eng-bg.jpg")';
+                tree.src = 'src/images/playable-eng-tree.png';
                 break;
             case 'chinese':
-                gameScene.style.backgroundImage = 'url("https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
-                gameScene.style.filter = 'hue-rotate(30deg) saturate(1.2)';
+                gameScene.style.backgroundImage = 'url("src/images/playable-ch-bg.jpg")';
+                tree.src = 'src/images/playable-ch-tree.png';
                 break;
             case 'korean':
-                gameScene.style.backgroundImage = 'url("https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
-                gameScene.style.filter = 'hue-rotate(300deg)';
+                gameScene.style.backgroundImage = 'url("src/images/playable-kr-bg.jpg")';
+                tree.src = 'src/images/playable-kr-tree.png';
                 break;
             case 'vietnamese':
-                gameScene.style.backgroundImage = 'url("https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
-                gameScene.style.filter = 'hue-rotate(100deg)';
+                gameScene.style.backgroundImage = 'url("src/images/playable-vn-bg.jpg")';
+                tree.src = 'src/images/playable-vn-tree.png';
                 break;
             default:
-                gameScene.style.backgroundImage = 'url("https://images.unsplash.com/photo-1472396961693-142e6e269027?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80")';
-                gameScene.style.filter = 'none';
+                gameScene.style.backgroundImage = 'url("src/images/playable-ch-bg.jpg")';
+                tree.src = 'src/images/playable-ch-tree.png';
         }
     }
 
@@ -277,7 +312,7 @@ function planetSection() {
 
     planets.forEach(planet => {
         // Phát âm thanh khi di chuột qua hành tinh
-        planet.addEventListener('mouseenter', function() {
+        planet.addEventListener('mouseenter', function () {
 
         });
 
@@ -309,6 +344,9 @@ function planetSection() {
             const language = planet.getAttribute('data-language');
             const planetName = planet.querySelector('.planet-info h3').textContent;
 
+            // Đổi background của scene dựa vào hành tinh được chọn
+            customizePlayableScene(language);
+
             // Animate mèo bay đến đó
             gsap.to(character, {
                 duration: 3,
@@ -318,8 +356,6 @@ function planetSection() {
                 onComplete: () => {
                     // Cuộn đến phần tieeps theo
                     document.querySelector('#playable').scrollIntoView({ behavior: 'smooth' });
-                    // Đổi background của scene dựa vào hành tinh được chọn
-                    customizePlayableScene(language);
                 }
             });
         });
@@ -330,7 +366,7 @@ function toggleGameInstruction() {
     const toggleBtn = document.querySelector('.toggle-instructions');
     const instructions = document.querySelector('.game-instructions');
 
-    console.log(toggleBtn , instructions)
+    console.log(toggleBtn, instructions)
     if (toggleBtn && instructions) {
         toggleBtn.addEventListener('click', () => {
             instructions.classList.toggle('collapsed');
@@ -338,11 +374,43 @@ function toggleGameInstruction() {
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+// Create twinkling stars effect
+function starEffect() {
+    const container = document.getElementById('stars-container');
+    const numStars = 200; // Number of stars to create
+
+    for (let i = 0; i < numStars; i++) {
+        const star = document.createElement('div');
+        star.className = 'star';
+
+        // Random position
+        const x = Math.random() * 100;
+        const y = Math.random() * 100;
+
+        // Random size
+        const size = Math.random() * 3;
+
+        // Random animation duration
+        const duration = 2 + Math.random() * 3;
+
+        // Set star styles
+        star.style.left = `${x}%`;
+        star.style.top = `${y}%`;
+        star.style.width = `${size}px`;
+        star.style.height = `${size}px`;
+        star.style.animationDuration = `${duration}s`;
+
+        container.appendChild(star);
+    }
+}
+
+
+document.addEventListener('DOMContentLoaded', function () {
     heroSection()
     introSection()
     planetSection()
     toggleGameInstruction()
+    starEffect()
 
     // Create star effect
     createStars();
